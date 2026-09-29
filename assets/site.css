@@ -201,6 +201,34 @@ html[lang="en"] .feature h3 { letter-spacing: -.015em; }
   background: var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%237DD3FC' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
 }
 
+/* save-to illustration (built from the app's own strings) */
+.sheet-stack { position: relative; width: min(400px, 88vw); padding: 40px 0 70px; }
+.sheet {
+  position: relative; background: #fff; border-radius: 28px; padding: 14px 22px 18px;
+  box-shadow: var(--shadow); border: 1px solid rgba(11,27,58,.06);
+}
+.sheet-grab { width: 40px; height: 4px; border-radius: 4px; background: #D5DBE6; margin: 0 auto 16px; }
+.sheet-title { font-size: 22px; font-weight: 700; color: var(--ink); }
+.sheet-path { font-size: 12px; color: var(--muted); margin: 4px 0 12px; word-break: break-all; }
+.sheet-row {
+  display: flex; gap: 14px; align-items: center; padding: 14px 12px; border-radius: 14px;
+  font-size: 15px; color: var(--ink); line-height: 1.4;
+}
+.sheet-row svg { width: 22px; height: 22px; flex: none; color: var(--navy-3); }
+.sheet-row span { display: flex; flex-direction: column; }
+.sheet-row small { font-size: 12px; color: var(--muted); }
+.sheet-row.on { background: #E8EEFB; }
+.toast {
+  position: absolute; right: -6%; bottom: 0; display: flex; align-items: center; gap: 12px;
+  background: var(--navy); color: #fff; border-radius: 18px; padding: 14px 18px;
+  box-shadow: 0 30px 60px -20px rgba(11,27,58,.6); font-size: 14px; line-height: 1.35;
+}
+.toast svg { width: 22px; height: 22px; flex: none; color: var(--sky); }
+.toast span { display: flex; flex-direction: column; }
+.toast small { color: rgba(255,255,255,.6); font-size: 12px; }
+.toast em { font-style: normal; color: var(--sky); font-weight: 600; margin-left: 10px; white-space: nowrap; }
+@media (max-width: 560px) { .toast { right: 0; left: 8%; } }
+
 /* PC band */
 .pc-band { background: var(--navy); color: rgba(255,255,255,.78); overflow: hidden; }
 .pc-band h2 { color: #fff; }

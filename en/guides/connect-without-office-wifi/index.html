@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AirBoard won't connect on office Wi‑Fi? Use a hotspot | AirBoard</title>
+<meta name="description" content="Office, school and hotel Wi‑Fi often blocks devices from talking to each other. Here is how to connect AirBoard with Windows Mobile hotspot or iPhone Personal Hotspot, tested on real devices.">
+<link rel="canonical" href="https://845labdevelopment-sys.github.io/en/guides/connect-without-office-wifi/">
+<link rel="alternate" hreflang="en" href="https://845labdevelopment-sys.github.io/en/guides/connect-without-office-wifi/">
+<link rel="alternate" hreflang="ja" href="https://845labdevelopment-sys.github.io/guides/connect-without-office-wifi/">
+<link rel="alternate" hreflang="x-default" href="https://845labdevelopment-sys.github.io/en/guides/connect-without-office-wifi/">
+<meta name="theme-color" content="#0B1B3A">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AirBoard">
+<meta property="og:title" content="AirBoard won't connect on office Wi‑Fi?">
+<meta property="og:description" content="Connect with Windows Mobile hotspot or iPhone Personal Hotspot.">
+<meta property="og:url" content="https://845labdevelopment-sys.github.io/en/guides/connect-without-office-wifi/">
+<meta property="og:image" content="https://845labdevelopment-sys.github.io/assets/img/og_en.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6768266068">
+<link rel="icon" href="/assets/img/AirBoard_icon_C1_rounded.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-64.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"AirBoard won't connect on office Wi‑Fi? Use a hotspot","inLanguage":"en","datePublished":"2026-10-06","dateModified":"2026-10-06","author":{"@type":"Organization","name":"845.Lab"},"publisher":{"@type":"Organization","name":"845.Lab"},"mainEntityOfPage":"https://845labdevelopment-sys.github.io/en/guides/connect-without-office-wifi/"}
+</script>
+<style>
+  .doc article ol { padding-left: 1.4em; margin: 0 0 16px; }
+  .doc article ol li { margin: 6px 0; font-size: 15.5px; }
+  .doc article .stores { margin: 24px 0 8px; }
+  .doc article .stores a { text-decoration: none; color: var(--navy); }
+  .doc article .stores a.primary { color: #fff; }
+  .doc .callout { background: var(--mist); border-radius: 14px; padding: 18px 22px; margin: 0 0 18px; }
+  .doc .callout p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+<header class="site-header plain">
+  <div class="wrap">
+    <a class="brand" href="/en/" aria-label="AirBoard home">
+      <img class="logo-white" src="/assets/img/AirBoard_logotype_white.svg" alt="AirBoard" width="93" height="22">
+      <img class="logo-navy" src="/assets/img/AirBoard_logotype_navy.svg" alt="AirBoard" width="93" height="22">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/en/">Home</a>
+      <a href="/en/#download">Download</a>
+      <a class="lang" href="/guides/connect-without-office-wifi/" hreflang="ja" lang="ja">JA</a>
+    </nav>
+  </div>
+</header>
+<main class="doc">
+  <div class="wrap">
+    <span class="eyebrow">Guide</span>
+    <h1>AirBoard won't connect on office Wi‑Fi?</h1>
+    <p class="updated">Connect with a hotspot · October 6, 2026</p>
+    <article>
+
+<p>AirBoard talks directly between devices on the same Wi‑Fi. Office, school, hotel and café networks often <strong>block devices from talking to each other</strong> for security, so AirBoard may not connect even when both devices are on the same Wi‑Fi.</p>
+<p>In that case, make a small network of your own with <strong>Windows Mobile hotspot</strong> or <strong>iPhone Personal Hotspot</strong>. We confirmed both with a Windows 10 PC and an iPhone in October 2026.</p>
+
+<div class="callout">
+<p><strong>Check first.</strong> Work or school PCs and phones may not allow hotspots, or may have them turned off. If you're not sure you're allowed, ask your administrator.</p>
+</div>
+
+<h2>Recommended: connect your iPhone to the Windows Mobile hotspot</h2>
+<p>The easiest way, with no settings to change.</p>
+<ol>
+<li>On Windows, open Settings › Network &amp; Internet › Mobile hotspot and turn it on. Note the network name and password.</li>
+<li>On the iPhone, open Settings › Wi‑Fi and join that network.</li>
+<li>Open AirBoard on both, tap Find on Wi‑Fi on the iPhone, and pick your PC.</li>
+</ol>
+<p>In our test it connected straight away, with no QR code or manual entry. Text, photos and the clipboard went from iPhone to PC, and text and files from PC to iPhone. The PC could host the hotspot while staying on its own Wi‑Fi (this depends on the PC's Wi‑Fi hardware).</p>
+
+<h2>Connect your PC to the iPhone's Personal Hotspot</h2>
+<ol>
+<li>On the iPhone, turn on Settings › Personal Hotspot.</li>
+<li>On Windows, join the network with your iPhone's name.</li>
+<li><strong>On Windows, set that network to Private.</strong> Settings › Network &amp; Internet › Wi‑Fi › your iPhone's network › Network profile › Private (on Windows 11, "Network profile type").</li>
+<li>Open AirBoard and connect.</li>
+</ol>
+<div class="callout">
+<p><strong>It won't connect while the network is Public.</strong> Windows often treats a new network as Public, and then Find on Wi‑Fi, QR and manual connection all failed. Setting your own iPhone's network to Private is fine.</p>
+</div>
+<p>After switching to Private, text, photos, the clipboard and files went both ways.</p>
+
+<h2>Still not connecting?</h2>
+<ul>
+<li>Make sure AirBoard is open on both Windows and the iPhone (the iPhone sends and receives only while AirBoard is open).</li>
+<li>Approve a new device on Windows the first time.</li>
+<li>An antivirus firewall may be blocking incoming connections.</li>
+<li>If nothing helps, email <a href="mailto:845labsupport@gmail.com">845labsupport@gmail.com</a> with the text from Settings › Connection diagnostics in the app.</li>
+</ul>
+
+<h2>Download</h2>
+<div class="stores">
+  <a class="btn dark primary" href="https://apps.microsoft.com/detail/9NDXC1X5SZB0" rel="noopener"><span><small>Windows</small><b>Microsoft Store</b></span></a>
+  <a class="btn dark" href="https://apps.apple.com/app/id6768266068" rel="noopener"><span><small>iPhone · iPad</small><b>App Store</b></span></a>
+  <a class="btn dark" href="https://play.google.com/store/apps/details?id=com.AirBoard" rel="noopener"><span><small>Android</small><b>Google Play</b></span></a>
+</div>
+<p><a href="/en/guides/iphone-windows-clipboard/">How to copy and paste between iPhone and Windows</a> · <a href="/en/">Everything AirBoard does</a></p>
+
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <img src="/assets/img/AirBoard_logotype_white.svg" alt="AirBoard" width="93" height="22">
+      <p>Copies and files between your devices, on your own Wi‑Fi.<br>By 845.Lab</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul><li><a href="/en/">AirBoard</a></li><li><a href="/en/#download">Download</a></li></ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul><li><a href="/privacy/#en">Privacy Policy</a></li><li><a href="mailto:845labsupport@gmail.com">Contact</a></li></ul>
+    </div>
+    <div class="legal">
+      <span>© 2026 845.Lab</span>
+      <span>iPhone, iPad and Mac are trademarks of Apple Inc. Windows is a trademark of Microsoft Corporation.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -269,6 +269,8 @@ a.plat:hover .go::after { transform: translateX(4px); }
 .plat.soon .go { color: var(--muted); }
 .plat.soon .go::after { content: ""; }
 .pricing-note { margin-top: 28px; font-size: 14px; color: var(--muted); }
+.guide-grid { grid-template-columns: repeat(3, 1fr); }
+.guide-grid .plat h3 { font-size: 19px; }
 
 /* privacy band */
 .privacy-band { background: linear-gradient(180deg, var(--navy) 0%, #0A1834 100%); color: rgba(255,255,255,.78); text-align: center; }

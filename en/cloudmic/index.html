@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CloudMic Live — Turn phones into microphones. Manage who speaks from your PC | 845.Lab</title>
+<meta name="description" content="CloudMic Live uses the smartphones already in the room as microphones and lets the host manage speech requests, permissions and mute from a Windows PC. Works entirely on the local Wi‑Fi. Participants need no app — they open it in the browser.">
+<link rel="canonical" href="https://845labdevelopment-sys.github.io/en/cloudmic/">
+<link rel="alternate" hreflang="ja" href="https://845labdevelopment-sys.github.io/cloudmic/">
+<link rel="alternate" hreflang="en" href="https://845labdevelopment-sys.github.io/en/cloudmic/">
+<link rel="alternate" hreflang="x-default" href="https://845labdevelopment-sys.github.io/en/cloudmic/">
+<meta name="theme-color" content="#0B1B3A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="845.Lab">
+<meta property="og:title" content="CloudMic Live — Turn phones into microphones">
+<meta property="og:description" content="Manage who speaks at your event from your PC, over local Wi‑Fi. Participants just scan a QR code — no app.">
+<meta property="og:url" content="https://845labdevelopment-sys.github.io/en/cloudmic/">
+<meta property="og:image" content="https://845labdevelopment-sys.github.io/assets/img/cloudmic/og_cloudmic.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/cloudmic/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/cloudmic/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/cloudmic.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CloudMic Live","applicationCategory":"BusinessApplication","operatingSystem":"Windows","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"publisher":{"@type":"Organization","name":"845.Lab","email":"845labsupport@gmail.com"},"url":"https://845labdevelopment-sys.github.io/en/cloudmic/","image":"https://845labdevelopment-sys.github.io/assets/img/cloudmic/icon-512.png"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand cm-brand" href="/en/cloudmic/" aria-label="CloudMic Live home">
+      <img src="/assets/img/cloudmic/icon-192.png" alt="" width="28" height="28">
+      <span class="brand-name">CloudMic Live</span>
+      <span class="brand-by">by 845.Lab</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="/en/cloudmic/privacy/">Privacy</a>
+      <a class="lang" href="/cloudmic/" hreflang="ja" lang="ja">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero cm-hero on-navy">
+    <div class="wrap">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Phones as microphones</span>
+        <h1>Every phone<br>is a <em>microphone.</em></h1>
+        <p class="lead">CloudMic Live uses the smartphones already in the room as microphones and lets the host manage speech requests, permissions and mute from a PC. No passing a mic around, no extra hardware.</p>
+        <div class="stores">
+          <a class="btn primary is-soon" href="#download" aria-describedby="soon-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8.5 20.5h7M12 17v3.5"/></svg>
+            <span><small>Windows · host app</small><b>Coming soon to Microsoft Store</b></span>
+          </a>
+          <a class="btn ghost" href="#how">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l5.5-3.5z"/></svg>
+            <span><small>3 steps</small><b>See how it works</b></span>
+          </a>
+        </div>
+        <p class="note" id="soon-note">Free to start · Participants are always free · No account</p>
+        <div class="cm-join">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 14h1v1h-1zM17 20h4v1h-4z"/></svg>
+          <p><b>Participants:</b> nothing to install. Scan the QR code on the host's screen with your phone and it opens in your browser.</p>
+        </div>
+      </div>
+      <div class="cm-stage reveal" aria-hidden="true">
+        <div class="cm-laptop">
+          <div class="lid"><img src="/assets/img/cloudmic/02_host_dashboard.webp" alt="" width="1280" height="720"></div>
+          <div class="base"></div>
+        </div>
+        <span class="cm-badge"><i></i>Speaking · 7 participants</span>
+        <div class="phone whole white"><div class="screen"><img src="/assets/img/cloudmic/07_participant_speaking.webp" alt="" width="720" height="1558"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cm-strip">
+    <div class="wrap">
+      <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.5 16a6 6 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg></span><span class="t">Local Wi‑Fi only</span></div>
+      <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3M9 9.5l2 2 4-4"/></svg></span><span class="t">No app for participants</span></div>
+      <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M4 4l16 16"/></svg></span><span class="t">Audio never leaves the room</span></div>
+      <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19a6 6 0 0 1 12 0M15.5 5.5a3 3 0 0 1 0 5.5M17 13.5a5 5 0 0 1 4 4.5"/></svg></span><span class="t">Free for up to 10 people</span></div>
+    </div>
+  </div>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Features</span>
+        <h2>Run the room<br>without passing a mic.</h2>
+        <p>Spot the raised hand, carry the mic over, get it back. CloudMic Live removes that loop by bringing every request to the host's screen.</p>
+      </div>
+      <div class="cm-grid">
+        <div class="cm-card reveal">
+          <span class="num">01</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></div>
+          <h3>Phones become microphones</h3>
+          <p>Participants scan a QR code and open a web page. While they are speaking, their voice plays from the host's PC.</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">02</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M19 7h1M4 12h2M12 12h8M4 17h11M20 17h0"/><circle cx="16" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="18" cy="17" r="2"/></svg></div>
+          <h3>Three speaking modes</h3>
+          <p>Request &amp; approve, free push-to-talk, or host nomination. Switch to fit the moment.</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">03</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5V5.5a1.5 1.5 0 0 1 3 0V11M11 10.5V4.5a1.5 1.5 0 0 1 3 0V11M14 10.5V6a1.5 1.5 0 0 1 3 0v6.5M17 11.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-2a6 6 0 0 1-5.1-2.8L4 13.8a1.6 1.6 0 0 1 2.7-1.6L8 14.5"/></svg></div>
+          <h3>The host stays in control</h3>
+          <p>Per-person mute, global mute, lock, remove and ban. You can also invite someone to speak, right from the PC.</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">04</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.5 5 13.5h6l-1 8 8-11h-6z"/></svg></div>
+          <h3>Buzzer and reactions</h3>
+          <p>The buzzer records who pressed first, automatically. Applause and laughter reactions add up on the host's screen.</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">05</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3.5a4 4 0 0 1 3.2 1.6l4.6 6.8a4 4 0 0 0 3.2 1.6H21M21 7h-3.5a4 4 0 0 0-3.2 1.6l-.6.8M3 17h3.5a4 4 0 0 0 3.2-1.6l.6-.8M18.5 4.5 21 7l-2.5 2.5M18.5 14.5 21 17l-2.5 2.5"/></svg></div>
+          <h3>Random pick</h3>
+          <p>Pick one participant at random. For calling on students or drawing a name at an event.</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">06</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Entirely on the local Wi‑Fi</h3>
+          <p>No internet needed. Audio is played live and never sent to the developer or any outside server. An event passcode and join lock keep the room to the people you invited.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section platforms" id="how">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">How it works</span>
+        <h2>Three steps to get started.</h2>
+      </div>
+      <div class="cm-steps">
+        <div class="cm-step reveal"><div class="n">1</div><h3>Create an event on your PC</h3><p>Launch the app on Windows and create an event. Make sure the PC is on the same Wi‑Fi as your participants.</p></div>
+        <div class="cm-step reveal"><div class="n">2</div><h3>Participants scan the QR code</h3><p>Show the QR code on screen. Participants scan it with their phone — no install, it opens in the browser.</p></div>
+        <div class="cm-step reveal"><div class="n">3</div><h3>Approve, and they're on</h3><p>A participant taps "Request to speak". When the host allows it, their voice plays from the PC.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="scenes">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Use cases</span>
+        <h2>Made for rooms like these.</h2>
+        <p>Anywhere people gather and there is Wi‑Fi.</p>
+      </div>
+      <div class="cm-scenes">
+        <div class="cm-scene reveal"><span class="os">Office</span><h3>Internal talks and briefings</h3><p>No more hunting for the mic during Q&amp;A.</p></div>
+        <div class="cm-scene reveal"><span class="os">School</span><h3>Classes and assemblies</h3><p>Nomination and random pick, from any seat.</p></div>
+        <div class="cm-scene reveal"><span class="os">Event</span><h3>Talk sessions</h3><p>Buzzer and reactions get the whole room involved.</p></div>
+        <div class="cm-scene reveal"><span class="os">Lecture</span><h3>Floor questions</h3><p>Request mode keeps it orderly: only approved people speak.</p></div>
+        <div class="cm-scene reveal"><span class="os">Community</span><h3>Local meetups</h3><p>One PC and the venue's Wi‑Fi is all it takes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section platforms" id="screens">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Screens</span>
+        <h2>The host on a PC,<br>participants on their phones.</h2>
+      </div>
+      <div class="cm-gallery">
+        <figure class="cm-shot reveal">
+          <div class="frame"><img src="/assets/img/cloudmic/02_host_dashboard.webp" alt="Host dashboard: participant list and pending requests on the left, the current speaker in the middle, volume, buzzer, reactions and random pick on the right" width="1280" height="720" loading="lazy"></div>
+          <figcaption><b>Host</b>Participants, speaking control and audio monitor in one view</figcaption>
+        </figure>
+        <figure class="cm-shot reveal">
+          <div class="frame"><img src="/assets/img/cloudmic/03_host_qr.webp" alt="Join QR code dialog showing the join URL and an alternative address" width="1280" height="720" loading="lazy"></div>
+          <figcaption><b>Host</b>Put the join QR code on the projector and people walk in</figcaption>
+        </figure>
+        <figure class="cm-shot reveal">
+          <div class="frame"><div class="phone whole white"><div class="screen"><img src="/assets/img/cloudmic/06_participant_idle.webp" alt="Participant screen while waiting: a large Request to speak button plus buzzer, applause and laughter buttons" width="720" height="1558" loading="lazy"></div></div></div>
+          <figcaption><b>Guest</b>Waiting: tap "Request to speak" to raise a hand</figcaption>
+        </figure>
+        <figure class="cm-shot reveal">
+          <div class="frame"><div class="phone whole white"><div class="screen"><img src="/assets/img/cloudmic/07_participant_speaking.webp" alt="Participant screen while speaking: a microphone icon and a Stop speaking button" width="720" height="1558" loading="lazy"></div></div></div>
+          <figcaption><b>Guest</b>Speaking: their voice plays from the PC</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pricing</span>
+        <h2>Participants are always free.<br>Hosts pay only for what they use.</h2>
+        <p>The host app is free to download. For rooms with more than 10 people, pick a one-day pass or a subscription.</p>
+      </div>
+      <div class="cm-plans">
+        <div class="cm-plan reveal">
+          <span class="os">Free</span>
+          <h3>Free</h3>
+          <div class="price"><b>¥0</b></div>
+          <p class="alt">Up to 10 participants</p>
+          <ul class="ticks">
+            <li>All core features</li>
+            <li>A small notice appears on participant screens</li>
+            <li>No time limit, no account</li>
+          </ul>
+        </div>
+        <div class="cm-plan featured reveal">
+          <span class="ribbon">Most popular</span>
+          <span class="os">Event Pass</span>
+          <h3>Event Pass</h3>
+          <div class="price"><b>¥500</b><small>one-time · 24 hours</small></div>
+          <p class="alt">Unlimited participants for 24 hours from purchase</p>
+          <ul class="ticks">
+            <li>No participant limit</li>
+            <li>No notice on participant screens</li>
+            <li>Buy it on the day, use it that day</li>
+          </ul>
+        </div>
+        <div class="cm-plan reveal">
+          <span class="os">Subscription</span>
+          <h3>Monthly / Yearly</h3>
+          <div class="price"><b>¥980</b><small>/ month</small></div>
+          <p class="alt">or ¥7,800 / year (two months free)</p>
+          <ul class="ticks">
+            <li>Unlimited participants, no notice</li>
+            <li>For frequent hosts</li>
+            <li>Recording and speech-log export</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cm-free-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19a6 6 0 0 1 12 0M15.5 5.5a3 3 0 0 1 0 5.5M17 13.5a5 5 0 0 1 4 4.5"/></svg>
+        <p>Participants are free on every plan, with no app and no account.<small>Prices include Japanese consumption tax. Purchases are handled by Microsoft Store in-app purchase; the developer never receives your payment details.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section privacy-band on-navy">
+    <div class="wrap reveal">
+      <span class="eyebrow">Privacy</span>
+      <h2>Voices stay in the room.</h2>
+      <p>Audio and event data travel only between the host's PC and the participants' devices on the local network. Nothing is sent to the developer or to third-party services. Audio is normally played live and not stored; with a paid plan's recording feature it is saved only on the host's PC. There are no analytics or advertising SDKs.</p>
+      <a class="link" href="/en/cloudmic/privacy/">Read the privacy policy</a>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions</h2>
+      </div>
+      <div class="faq cm-faq reveal">
+        <details>
+          <summary>Does everyone need to be on the same Wi‑Fi?</summary>
+          <div class="a"><p>Yes. The host PC and the participants' phones must be on the same Wi‑Fi (or the same LAN). There is no way to join remotely over the internet — which also means no voice or event data ever passes through an outside server.</p><p>If the venue's Wi‑Fi blocks devices from talking to each other, you can connect phones to the PC's Mobile hotspot instead.</p></div>
+        </details>
+        <details>
+          <summary>A security warning appears on the phone the first time it connects</summary>
+          <div class="a">
+            <p>Because CloudMic Live uses the microphone, the host PC serves the page over HTTPS with a certificate it generates itself. That certificate is not issued by a public authority, so the browser warns once on first access. The connection never leaves your local network, so it is safe to proceed.</p>
+            <p><b>Android (Chrome)</b></p>
+            <ol>
+              <li>On "Your connection is not private", tap <b>Advanced</b></li>
+              <li>Tap <b>Proceed to (address) (unsafe)</b></li>
+            </ol>
+            <p><b>iPhone (Safari)</b></p>
+            <ol>
+              <li>On "This Connection Is Not Private", tap <b>Show Details</b></li>
+              <li>Tap <b>visit this website</b>, then <b>Visit Website</b> to confirm</li>
+            </ol>
+            <p>If it still won't connect, the "?" button on the host screen explains how to use an alternative address.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is audio recorded?</summary>
+          <div class="a"><p>Normally, no. Only when a host on the monthly or yearly plan uses the recording feature is audio saved, as a file on the host's own PC. While recording, every participant's screen shows a "Recording" indicator. Audio is never sent to the developer or any server.</p><p>The microphone is used only between "Start speaking" and "Stop speaking".</p></div>
+        </details>
+        <details>
+          <summary>Do participants need to install an app?</summary>
+          <div class="a"><p>No. They open the host's QR code in Safari (iPhone) or Chrome (Android). No account is needed, and participants are always free.</p></div>
+        </details>
+        <details>
+          <summary>What does the host app run on?</summary>
+          <div class="a"><p>Windows 10 (version 1809 or later) and Windows 11. We will add the Microsoft Store link to this page as soon as the app is available.</p></div>
+        </details>
+        <details>
+          <summary>How do I contact you?</summary>
+          <div class="a"><p>Email <a href="mailto:845labsupport@gmail.com">845labsupport@gmail.com</a>. If something isn't connecting, include the host PC's OS, the phone model, and what you tried from the "?" guide on the host screen.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta platforms cm-download" id="download">
+    <div class="wrap reveal">
+      <img class="icon" src="/assets/img/cloudmic/icon-192.png" alt="" width="88" height="88">
+      <h2>Stop passing the mic at your next event.</h2>
+      <p>The host app is for Windows. Participants join from the phone they already have, with nothing to install.</p>
+      <div class="stores">
+        <!-- The Microsoft Store URL lives here and only here. Once published: set href to the real URL, remove "is-soon" from class, remove aria-disabled, and change the label to "Get it from Microsoft Store". -->
+        <a class="btn dark primary is-soon" id="ms-store-link" href="#download" aria-disabled="true" rel="noopener"><span><small>Windows 10 / 11</small><b>Coming soon to Microsoft Store</b></span></a>
+      </div>
+      <p class="meta">Participants: scan the QR code shown on the host's screen.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="cm-brand" href="/en/cloudmic/"><img src="/assets/img/cloudmic/icon-192.png" alt="" width="24" height="24"><span class="brand-name">CloudMic Live</span></a>
+      <p>Phones as microphones, managed from your PC.<br>Made by 845.Lab</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/en/#apps">More apps by 845.Lab</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="/en/cloudmic/privacy/">Privacy policy</a></li>
+        <li><a href="mailto:845labsupport@gmail.com">Contact</a></li>
+        <li><a href="/cloudmic/" hreflang="ja" lang="ja">日本語</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>© 2026 845.Lab</span>
+      <span>Microsoft Store is a trademark of Microsoft Corporation. iPhone and Safari are trademarks of Apple Inc. Android and Chrome are trademarks of Google LLC.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

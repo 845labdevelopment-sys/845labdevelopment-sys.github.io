@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CloudMic Live — スマホがそのままマイクに。発言を PC からまとめて管理 | 845.Lab</title>
+<meta name="description" content="CloudMic Live は、会場の参加者のスマートフォンをマイクとして使い、発言の申請・許可・ミュートをホストの PC から管理する Windows アプリです。同じ Wi‑Fi の中だけで完結。参加者はインストール不要、ブラウザで開くだけ。">
+<link rel="canonical" href="https://845labdevelopment-sys.github.io/cloudmic/">
+<link rel="alternate" hreflang="ja" href="https://845labdevelopment-sys.github.io/cloudmic/">
+<link rel="alternate" hreflang="en" href="https://845labdevelopment-sys.github.io/en/cloudmic/">
+<link rel="alternate" hreflang="x-default" href="https://845labdevelopment-sys.github.io/en/cloudmic/">
+<meta name="theme-color" content="#0B1B3A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="845.Lab">
+<meta property="og:title" content="CloudMic Live — スマホがそのままマイクに">
+<meta property="og:description" content="同じ Wi‑Fi の参加者の発言を、PC からまとめて管理。参加者はアプリ不要、QR を読むだけ。">
+<meta property="og:url" content="https://845labdevelopment-sys.github.io/cloudmic/">
+<meta property="og:image" content="https://845labdevelopment-sys.github.io/assets/img/cloudmic/og_cloudmic.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/cloudmic/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/cloudmic/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/cloudmic.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CloudMic Live","applicationCategory":"BusinessApplication","operatingSystem":"Windows","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"publisher":{"@type":"Organization","name":"845.Lab","email":"845labsupport@gmail.com"},"url":"https://845labdevelopment-sys.github.io/cloudmic/","image":"https://845labdevelopment-sys.github.io/assets/img/cloudmic/icon-512.png"}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand cm-brand" href="/cloudmic/" aria-label="CloudMic Live ホーム">
+      <img src="/assets/img/cloudmic/icon-192.png" alt="" width="28" height="28">
+      <span class="brand-name">CloudMic Live</span>
+      <span class="brand-by">by 845.Lab</span>
+    </a>
+    <nav class="nav" aria-label="メイン">
+      <a href="#features">特長</a>
+      <a href="#how">使い方</a>
+      <a href="#pricing">料金</a>
+      <a href="#faq">よくある質問</a>
+      <a href="/cloudmic/privacy/">プライバシー</a>
+      <a class="lang" href="/en/cloudmic/" hreflang="en" lang="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero cm-hero on-navy">
+    <div class="wrap">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Phones as microphones</span>
+        <h1 class="cm-keep">スマホが、<br><em>そのまま</em><wbr>マイクに。</h1>
+        <p class="lead">会場にいる参加者のスマートフォンをマイクとして使い、発言の申請・許可・ミュートをホストの PC からまとめて管理。マイクを回す手間も、専用機材も要りません。</p>
+        <div class="stores">
+          <a class="btn primary is-soon" href="#download" aria-describedby="soon-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8.5 20.5h7M12 17v3.5"/></svg>
+            <span><small>Windows · ホスト用アプリ</small><b>Microsoft Store で近日公開</b></span>
+          </a>
+          <a class="btn ghost" href="#how">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l5.5-3.5z"/></svg>
+            <span><small>3 ステップ</small><b>使い方を見る</b></span>
+          </a>
+        </div>
+        <p class="note" id="soon-note">ホスト用アプリは無料ではじめられます · 参加者はいつでも無料 · アカウント登録なし</p>
+        <div class="cm-join">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 14h1v1h-1zM17 20h4v1h-4z"/></svg>
+          <p><b>参加者の方へ：</b>アプリのインストールは不要です。ホストの画面に表示される QR コードをスマートフォンで読み取ると、ブラウザでそのまま参加できます。</p>
+        </div>
+      </div>
+      <div class="cm-stage reveal" aria-hidden="true">
+        <div class="cm-laptop">
+          <div class="lid"><img src="/assets/img/cloudmic/02_host_dashboard.webp" alt="" width="1280" height="720"></div>
+          <div class="base"></div>
+        </div>
+        <span class="cm-badge"><i></i>発言中 · 参加者 7 名</span>
+        <div class="phone whole white"><div class="screen"><img src="/assets/img/cloudmic/07_participant_speaking.webp" alt="" width="720" height="1558"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cm-strip">
+    <div class="wrap">
+      <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.5 16a6 6 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg></span><span class="t">同じ Wi‑Fi <wbr>だけで完結</span></div>
+      <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3M9 9.5l2 2 4-4"/></svg></span><span class="t">参加者は<wbr>インストール不要</span></div>
+      <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M4 4l16 16"/></svg></span><span class="t">音声は<wbr>外部に送らない</span></div>
+      <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19a6 6 0 0 1 12 0M15.5 5.5a3 3 0 0 1 0 5.5M17 13.5a5 5 0 0 1 4 4.5"/></svg></span><span class="t">無料で <wbr>10 人まで</span></div>
+    </div>
+  </div>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Features</span>
+        <h2 class="cm-keep">マイクを<wbr>回さない、<br>その場の進行。</h2>
+        <p>手を挙げた人を見つけて、マイクを届けて、戻してもらう。その往復をなくすために、発言のやり取りを PC の画面に集めました。</p>
+      </div>
+      <div class="cm-grid">
+        <div class="cm-card reveal">
+          <span class="num">01</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></div>
+          <h3>スマホがそのままマイクに</h3>
+          <p>参加者は QR を読み取ってブラウザで開くだけ。「発言を開始」している間だけ、声がホストの PC から流れます。</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">02</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M19 7h1M4 12h2M12 12h8M4 17h11M20 17h0"/><circle cx="16" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="18" cy="17" r="2"/></svg></div>
+          <h3>3 つの発言モード</h3>
+          <p>手を挙げてもらって許可する「申請制」、押している間だけ話せる「自由 PTT」、ホストが選ぶ「指名制」。場面に合わせて切り替えられます。</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">03</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5V5.5a1.5 1.5 0 0 1 3 0V11M11 10.5V4.5a1.5 1.5 0 0 1 3 0V11M14 10.5V6a1.5 1.5 0 0 1 3 0v6.5M17 11.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-2a6 6 0 0 1-5.1-2.8L4 13.8a1.6 1.6 0 0 1 2.7-1.6L8 14.5"/></svg></div>
+          <h3>進行はホストの手元で</h3>
+          <p>個別ミュート・全体ミュート・機能ロック・退出・再入室禁止。話してほしい人には、PC から「発言してください」と依頼できます。</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">04</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.5 5 13.5h6l-1 8 8-11h-6z"/></svg></div>
+          <h3>早押しとリアクション</h3>
+          <p>早押しボタンは押した順位を自動で記録。拍手・笑いのリアクションは、ホストの画面に数で集まります。</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">05</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3.5a4 4 0 0 1 3.2 1.6l4.6 6.8a4 4 0 0 0 3.2 1.6H21M21 7h-3.5a4 4 0 0 0-3.2 1.6l-.6.8M3 17h3.5a4 4 0 0 0 3.2-1.6l.6-.8M18.5 4.5 21 7l-2.5 2.5M18.5 14.5 21 17l-2.5 2.5"/></svg></div>
+          <h3>ランダム指名</h3>
+          <p>参加中の人からひとりを選びます。授業の指名や、イベントの抽選に。</p>
+        </div>
+        <div class="cm-card reveal">
+          <span class="num">06</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>同じ Wi‑Fi の中だけで完結</h3>
+          <p>インターネットは不要。音声はその場で再生され、開発者のサーバーや外部には一切送られません。参加の合言葉と受付ロックで、入ってよい人だけに。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section platforms" id="how">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">How it works</span>
+        <h2 class="cm-keep">はじめるのは、3 ステップだけ。</h2>
+      </div>
+      <div class="cm-steps">
+        <div class="cm-step reveal"><div class="n">1</div><h3>PC でイベントを作る</h3><p>Windows でアプリを起動し、イベントを作ります。参加者と同じ Wi‑Fi につないでおきます。</p></div>
+        <div class="cm-step reveal"><div class="n">2</div><h3>参加者が QR を読み取る</h3><p>画面に出る QR コードを、参加者がスマートフォンで読み取ります。インストール不要、ブラウザで開くだけ。</p></div>
+        <div class="cm-step reveal"><div class="n">3</div><h3>許可すると、声が流れる</h3><p>参加者が「発言リクエスト」を押し、ホストが許可すると、その人の声が PC から流れます。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="scenes">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Use cases</span>
+        <h2 class="cm-keep">こんな場面に。</h2>
+        <p>人が集まる部屋と Wi‑Fi があれば、どこでも使えます。</p>
+      </div>
+      <div class="cm-scenes">
+        <div class="cm-scene reveal"><span class="os">Office</span><h3>社内勉強会・説明会</h3><p>質疑応答で、マイクを探して回す時間をなくす。</p></div>
+        <div class="cm-scene reveal"><span class="os">School</span><h3>学校の授業・全校集会</h3><p>指名制やランダム指名で、席から発言。</p></div>
+        <div class="cm-scene reveal"><span class="os">Event</span><h3>イベントのトークセッション</h3><p>早押しやリアクションで、会場を巻き込む。</p></div>
+        <div class="cm-scene reveal"><span class="os">Lecture</span><h3>講演会のフロア質問</h3><p>申請制で順番に。許可した人だけが話せる。</p></div>
+        <div class="cm-scene reveal"><span class="os">Community</span><h3>地域の集まり</h3><p>公民館の Wi‑Fi と PC 1 台で、すぐにはじめられる。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section platforms" id="screens">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Screens</span>
+        <h2 class="cm-keep">ホストは PC で、<br>参加者はスマホで。</h2>
+      </div>
+      <div class="cm-gallery">
+        <figure class="cm-shot reveal">
+          <div class="frame"><img src="/assets/img/cloudmic/02_host_dashboard.webp" alt="ホスト画面。左に参加者の一覧と承認待ち、中央に発言中の人、右に音量・ブザー・リアクション・ランダム指名" width="1280" height="720" loading="lazy"></div>
+          <figcaption><b>Host</b>参加者・発言管理・音声モニターをひとつの画面で</figcaption>
+        </figure>
+        <figure class="cm-shot reveal">
+          <div class="frame"><img src="/assets/img/cloudmic/03_host_qr.webp" alt="参加用 QR コードの表示。参加 URL と、つながらないときの別アドレスも表示されている" width="1280" height="720" loading="lazy"></div>
+          <figcaption><b>Host</b>参加用 QR コードをスクリーンに映すだけで受け付け</figcaption>
+        </figure>
+        <figure class="cm-shot reveal">
+          <div class="frame"><div class="phone whole white"><div class="screen"><img src="/assets/img/cloudmic/06_participant_idle.webp" alt="参加者の待機画面。大きな「発言リクエスト」ボタンと、早押し・拍手・笑いのボタン" width="720" height="1558" loading="lazy"></div></div></div>
+          <figcaption><b>Guest</b>待機中。「発言リクエスト」を押して手を挙げる</figcaption>
+        </figure>
+        <figure class="cm-shot reveal">
+          <div class="frame"><div class="phone whole white"><div class="screen"><img src="/assets/img/cloudmic/07_participant_speaking.webp" alt="参加者の発言中画面。マイクのアイコンと「発言を終了する」ボタン" width="720" height="1558" loading="lazy"></div></div></div>
+          <figcaption><b>Guest</b>発言中。自分の声が PC から流れている</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pricing</span>
+        <h2 class="cm-keep">参加者は、<wbr>いつでも無料。<br>ホストは<wbr>使う分だけ。</h2>
+        <p>ホスト用アプリは無料でダウンロードできます。10 人を超える会では、1 回分のパスか、月額・年額を選べます。</p>
+      </div>
+      <div class="cm-plans">
+        <div class="cm-plan reveal">
+          <span class="os">Free</span>
+          <h3>無料</h3>
+          <div class="price"><b>¥0</b></div>
+          <p class="alt">参加者 10 人まで</p>
+          <ul class="ticks">
+            <li>すべての基本機能が使えます</li>
+            <li>参加者の画面に、小さな案内が表示されます</li>
+            <li>期限なし・登録なし</li>
+          </ul>
+        </div>
+        <div class="cm-plan featured reveal">
+          <span class="ribbon">いちばん人気</span>
+          <span class="os">Event Pass</span>
+          <h3>イベントパス</h3>
+          <div class="price"><b>¥500</b><small>買い切り · 24 時間</small></div>
+          <p class="alt">購入から 24 時間、人数無制限</p>
+          <ul class="ticks">
+            <li>参加者の人数制限なし</li>
+            <li>参加者の画面に案内は出ません</li>
+            <li>イベントの日に買って、その日だけ使う</li>
+          </ul>
+        </div>
+        <div class="cm-plan reveal">
+          <span class="os">Subscription</span>
+          <h3>月額 / 年額</h3>
+          <div class="price"><b>¥980</b><small>/ 月</small></div>
+          <p class="alt">年額なら ¥7,800（2 か月分おトク）</p>
+          <ul class="ticks">
+            <li>参加者の人数制限なし・案内なし</li>
+            <li>頻繁に使う方向け</li>
+            <li>録音・発言ログの書き出し</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cm-free-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19a6 6 0 0 1 12 0M15.5 5.5a3 3 0 0 1 0 5.5M17 13.5a5 5 0 0 1 4 4.5"/></svg>
+        <p>参加者は、どのプランでもいつでも無料。アプリのインストールもアカウントも要りません。<small>価格はすべて税込。購入は Microsoft Store のアプリ内購入で処理され、開発者がカード番号などを受け取ることはありません。</small></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section privacy-band on-navy">
+    <div class="wrap reveal">
+      <span class="eyebrow">Privacy</span>
+      <h2 class="cm-keep">声は、その部屋の中だけに。</h2>
+      <p>参加者の音声とイベントの情報は、ホストの PC と参加者の端末の間だけでやり取りされ、開発者のサーバーや外部サービスには送られません。音声は通常その場で再生されるだけで、有料プランの録音機能を使った場合も、ホストの PC の中にだけ保存されます。解析ツールも広告ネットワークも組み込んでいません。</p>
+      <a class="link" href="/cloudmic/privacy/">プライバシーポリシーを読む</a>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>よくある質問</h2>
+      </div>
+      <div class="faq cm-faq reveal">
+        <details>
+          <summary>同じ Wi‑Fi でないと使えませんか？</summary>
+          <div class="a"><p>はい。ホストの PC と参加者のスマートフォンが、同じ Wi‑Fi（または同じ LAN）につながっている必要があります。インターネットを通して離れた場所から参加する機能はありません。そのぶん、声やイベントの情報が外のサーバーを通ることもありません。</p><p>会場の Wi‑Fi で端末どうしの通信が止められている場合は、PC の「モバイル ホットスポット」にスマートフォンをつなぐ方法もあります。</p></div>
+        </details>
+        <details>
+          <summary>はじめて接続したとき、スマホに「保護されていない通信」などの警告が出ます</summary>
+          <div class="a">
+            <p>CloudMic Live はマイクを使うため、ホストの PC が自分で作った証明書で暗号化通信（https）をしています。この証明書は公的に発行されたものではないので、初回だけブラウザが警告を出します。同じ Wi‑Fi の中だけの通信なので、そのまま進んで問題ありません。</p>
+            <p><b>Android（Chrome）</b></p>
+            <ol>
+              <li>「接続はプライベートではありません」の画面で「詳細設定」をタップ</li>
+              <li>「（アドレス）にアクセスする（安全ではありません）」をタップ</li>
+            </ol>
+            <p><b>iPhone（Safari）</b></p>
+            <ol>
+              <li>「この接続はプライベートではありません」の画面で「詳細を表示」をタップ</li>
+              <li>「この Web サイトを閲覧」をタップし、もう一度「Web サイトを閲覧」をタップ</li>
+            </ol>
+            <p>それでもつながらないときは、ホストの画面の「？」ボタンに、別のアドレスで接続する方法をまとめています。</p>
+          </div>
+        </details>
+        <details>
+          <summary>音声は録音されますか？</summary>
+          <div class="a"><p>通常は録音されません。月額・年額プランのホストが録音機能を使ったときだけ、ホストの PC の中にファイルとして保存されます。その間、参加者の画面には「録音中」と表示されます。開発者や外部に音声が送られることはありません。</p><p>マイクが使われるのは、参加者が「発言を開始」してから「発言を終了」するまでの間だけです。</p></div>
+        </details>
+        <details>
+          <summary>参加者はアプリをインストールする必要がありますか？</summary>
+          <div class="a"><p>いいえ。iPhone は Safari、Android は Chrome で、ホストの QR コードを読み取って開くだけです。アカウント登録も不要で、参加者はいつでも無料です。</p></div>
+        </details>
+        <details>
+          <summary>ホスト用アプリはどの環境で動きますか？</summary>
+          <div class="a"><p>Windows 10（バージョン 1809 以降）/ Windows 11 の PC で動きます。Microsoft Store からダウンロードできるようになり次第、このページにリンクを掲載します。</p></div>
+        </details>
+        <details>
+          <summary>問い合わせ先はどこですか？</summary>
+          <div class="a"><p><a href="mailto:845labsupport@gmail.com">845labsupport@gmail.com</a> までお送りください。つながらないときは、ホスト PC の OS とスマートフォンの機種、ホスト画面の「？」の案内で試したことを添えていただけると早く調べられます。</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta platforms cm-download" id="download">
+    <div class="wrap reveal">
+      <img class="icon" src="/assets/img/cloudmic/icon-192.png" alt="" width="88" height="88">
+      <h2 class="cm-keep">次の集まりから、<wbr>マイクを回さない。</h2>
+      <p>ホスト用アプリは Windows 向け。参加者はいつもの端末で、インストールなしで参加できます。</p>
+      <div class="stores">
+        <!-- Microsoft Store の URL はここ 1 か所だけ。公開後は href を実際の URL に書き換え、class から "is-soon" を外し、aria-disabled を削除し、文言を「Microsoft Store で入手」に変える。 -->
+        <a class="btn dark primary is-soon" id="ms-store-link" href="#download" aria-disabled="true" rel="noopener"><span><small>Windows 10 / 11</small><b>Microsoft Store で近日公開</b></span></a>
+      </div>
+      <p class="meta">参加者の方は、ホストの画面に表示される QR コードを読み取ってください。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="cm-brand" href="/cloudmic/"><img src="/assets/img/cloudmic/icon-192.png" alt="" width="24" height="24"><span class="brand-name">CloudMic Live</span></a>
+      <p>スマホをマイクにして、発言を PC から管理。<br>開発: 845.Lab</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#features">特長</a></li>
+        <li><a href="#how">使い方</a></li>
+        <li><a href="#pricing">料金</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="/#apps">845.Lab のほかのアプリ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="/cloudmic/privacy/">プライバシーポリシー</a></li>
+        <li><a href="mailto:845labsupport@gmail.com">お問い合わせ</a></li>
+        <li><a href="/en/cloudmic/" hreflang="en" lang="en">English</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>© 2026 845.Lab</span>
+      <span>Microsoft Store は Microsoft Corporation の商標です。iPhone・Safari は Apple Inc. の商標です。Android・Chrome は Google LLC の商標です。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

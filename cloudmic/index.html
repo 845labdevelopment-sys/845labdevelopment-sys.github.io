@@ -66,6 +66,13 @@
 </header>
 
 <main>
+  <aside class="cm-inapp" id="cm-inapp" hidden>
+    <div class="wrap">
+      <p class="cm-inapp-title">さっきのイベントで使われていたアプリです</p>
+      <p>あなたの勉強会・授業・会議でも、Windows の PC 1 台で始められます。参加者 5 人までは無料。参加する人は、今日と同じく QR を読むだけです。</p>
+      <a class="btn primary" href="#download">入手方法を見る</a>
+    </div>
+  </aside>
   <section class="hero cm-hero on-navy">
     <div class="wrap">
       <div class="hero-copy reveal">
@@ -443,6 +450,10 @@
   </div>
 </footer>
 
+<script>
+/* 参加者画面の「詳しく見る」（?cid=inapp）から来た人にだけ、最初に短い案内を出す */
+(function(){try{if(new URLSearchParams(location.search).get('cid')==='inapp'){var b=document.getElementById('cm-inapp');if(b)b.hidden=false;}}catch(e){}})();
+</script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

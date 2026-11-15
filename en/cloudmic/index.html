@@ -66,6 +66,13 @@
 </header>
 
 <main>
+  <aside class="cm-inapp" id="cm-inapp" hidden>
+    <div class="wrap">
+      <p class="cm-inapp-title">This is the app that ran the event you just joined</p>
+      <p>You can run your own class, meetup or meeting the same way from one Windows PC. Free for up to 5 participants. Your audience just scans a QR code, like you did today.</p>
+      <a class="btn primary" href="#download">How to get it</a>
+    </div>
+  </aside>
   <section class="hero cm-hero on-navy">
     <div class="wrap">
       <div class="hero-copy reveal">
@@ -444,6 +451,10 @@
   </div>
 </footer>
 
+<script>
+/* 参加者画面の「詳しく見る」（?cid=inapp）から来た人にだけ、最初に短い案内を出す */
+(function(){try{if(new URLSearchParams(location.search).get('cid')==='inapp'){var b=document.getElementById('cm-inapp');if(b)b.hidden=false;}}catch(e){}})();
+</script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

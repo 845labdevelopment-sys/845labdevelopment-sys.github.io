@@ -268,3 +268,11 @@ html[lang="ja"] .cm-strip .item .t { word-break: keep-all; }
   .brand.cm-brand .brand-by { display: none; }
   .cm-plan .price b { font-size: 38px; }
 }
+
+/* 参加者画面のリンク（?cid=inapp）から来た人向けの案内。ヘッダー（白い文字）が上に重なるので濃い色にする */
+.cm-inapp { background: #0B1B3A; border-bottom: 1px solid rgba(110,231,183,.35); padding: 88px 0 20px; }
+.cm-inapp[hidden] { display: none; }
+.cm-inapp .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
+.cm-inapp p { margin: 0; flex: 1 1 320px; color: rgba(255,255,255,.86); font-size: 15px; line-height: 1.6; }
+.cm-inapp .cm-inapp-title { flex: 1 1 100%; font-weight: 800; font-size: 17px; color: #6EE7B7; }
+.cm-inapp .btn { flex: 0 0 auto; }

@@ -25,9 +25,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/cloudmic.css">
+<style>
+/* 方式の比較表（competitive comparison） */
+.cm-compare { margin-top: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.cm-compare table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 14px; }
+.cm-compare th, .cm-compare td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); line-height: 1.6; }
+.cm-compare thead th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; background: #FAFBFD; }
+.cm-compare tbody th { font-weight: 700; color: var(--ink); white-space: nowrap; width: 1%; }
+.cm-compare td { color: var(--muted); }
+.cm-compare tr:last-child th, .cm-compare tr:last-child td { border-bottom: 0; }
+.cm-compare .me { background: var(--em-mist); color: var(--ink); }
+.cm-compare thead .me { color: var(--em-deep); }
+.cm-compare .yes { color: var(--em-deep); font-weight: 700; }
+.cm-compare-note { color: var(--muted); font-size: 13px; margin: 14px 4px 0; }
+</style>
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CloudMic Live","applicationCategory":"BusinessApplication","operatingSystem":"Windows","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"publisher":{"@type":"Organization","name":"845.Lab","email":"845labsupport@gmail.com"},"url":"https://845labdevelopment-sys.github.io/en/cloudmic/","image":"https://845labdevelopment-sys.github.io/assets/img/cloudmic/icon-512.png"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CloudMic Live","applicationCategory":"BusinessApplication","operatingSystem":"Windows","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"845.Lab","email":"845labsupport@gmail.com"},"url":"https://845labdevelopment-sys.github.io/en/cloudmic/","image":"https://845labdevelopment-sys.github.io/assets/img/cloudmic/icon-512.png"}
 </script>
 <!-- CF_WEB_ANALYTICS: 訪問数計測（Cookie なし）。Cloudflare Web Analytics のトークン取得後、apply_to_site.py の --analytics-token でここに script が入る -->
 </head>
@@ -238,7 +252,7 @@
         <div class="cm-plan reveal">
           <span class="os">Free</span>
           <h3>Free</h3>
-          <div class="price"><b>¥0</b></div>
+          <div class="price"><b>US$0</b></div>
           <p class="alt">Up to 5 participants</p>
           <ul class="ticks">
             <li>All core features</li>
@@ -250,7 +264,7 @@
           <span class="ribbon">Most popular</span>
           <span class="os">Event Pass</span>
           <h3>Event Pass</h3>
-          <div class="price"><b>¥500</b><small>one-time · 24 hours</small></div>
+          <div class="price"><b>US$4.99</b><small>one-time · 24 hours</small></div>
           <p class="alt">Unlimited participants for 24 hours from purchase</p>
           <ul class="ticks">
             <li>No participant limit</li>
@@ -261,8 +275,8 @@
         <div class="cm-plan reveal">
           <span class="os">Subscription</span>
           <h3>Monthly / Yearly</h3>
-          <div class="price"><b>¥980</b><small>/ month</small></div>
-          <p class="alt">or ¥7,800 / year (two months free)</p>
+          <div class="price"><b>US$9.99</b><small>/ month</small></div>
+          <p class="alt">or US$69.99 / year (save over 40%)</p>
           <ul class="ticks">
             <li>Unlimited participants, no notice</li>
             <li>For frequent hosts</li>
@@ -272,12 +286,46 @@
       </div>
       <div class="cm-free-note reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19a6 6 0 0 1 12 0M15.5 5.5a3 3 0 0 1 0 5.5M17 13.5a5 5 0 0 1 4 4.5"/></svg>
-        <p>Participants are free on every plan, with no app and no account.<small>Prices include Japanese consumption tax. Purchases are handled by Microsoft Store in-app purchase; the developer never receives your payment details.</small></p>
+        <p>Participants are free on every plan, with no app and no account.<small>Prices in US dollars; Microsoft Store shows the equivalent in your region's currency, tax included where applicable. Purchases are handled by Microsoft Store in-app purchase; the developer never receives your payment details.</small></p>
       </div>
       <div class="cm-free-note reveal" id="business">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>
         <p><strong>Teams and organizations</strong> (several PCs, invoicing): get in touch.<small>We will suggest a plan that fits your setup. <a href="mailto:845labsupport@gmail.com">845labsupport@gmail.com</a></small></p>
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="compare">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Compare</span>
+        <h2>Other ways to get the room's voice heard.</h2>
+        <p>From passing a mic to dedicated hardware, here is how the approaches line up — including what CloudMic Live is not built for.</p>
+      </div>
+      <div class="cm-compare reveal">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Passing a mic /<br>rental</th>
+              <th scope="col">Dedicated receiver +<br>participant app</th>
+              <th scope="col">Cloud-based<br>phone-mic services</th>
+              <th scope="col">Text Q&amp;A<br>tools</th>
+              <th scope="col" class="me">CloudMic Live</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Participant setup</th><td>None</td><td>Install an app</td><td>Mostly browser (some need an iPhone app)</td><td>Browser</td><td class="me">Browser — just scan a QR code</td></tr>
+            <tr><th scope="row">Internet</th><td>Not needed</td><td>Required (receiver is wired)</td><td>Required (stops when it drops)</td><td>Required</td><td class="me"><span class="yes">Not needed</span> — venue Wi‑Fi only</td></tr>
+            <tr><th scope="row">Hardware</th><td>Mics, receiver, speakers</td><td>Dedicated receiver, pro-grade Wi‑Fi</td><td>A PC</td><td>A PC</td><td class="me">One Windows PC (plus the venue speakers)</td></tr>
+            <tr><th scope="row">Speak by voice</th><td>Yes</td><td>Yes (one at a time)</td><td>Yes</td><td>No — text only</td><td class="me"><span class="yes">Yes</span></td></tr>
+            <tr><th scope="row">Host controls</th><td>A person carries the mic</td><td>Approve, mute, polls</td><td>Approve, queue</td><td>Question moderation, polls (moderation often paid)</td><td class="me">Approve, mute, time limits, nomination, polls, question box, reports</td></tr>
+            <tr><th scope="row">Typical cost</th><td>Rental mic about US$10–22 per day each</td><td>Receiver alone about US$2,650–4,290 (e.g. Biamp Crowd Mics ATOM, street price), quoted per project</td><td>Monthly or 30-day plans</td><td>Often from about US$200 per event or US$900 per year</td><td class="me">Free up to 5 people,<br>then from US$4.99 a day</td></tr>
+            <tr><th scope="row">Not a fit for</th><td>Big crowds, lots of questions</td><td>Small rooms, tight budgets</td><td>Venues with weak internet, confidential talks</td><td>Rooms that want to talk out loud</td><td class="me">1,000-seat halls, HDMI output to venue displays, remote attendees</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cm-compare-note">Costs are indicative, checked against public information in November 2026; they vary by product terms and exchange rates. Street prices quoted from resellers.</p>
     </div>
   </section>
 
@@ -329,6 +377,14 @@
         <details>
           <summary>Do participants need to install an app?</summary>
           <div class="a"><p>No. They open the host's QR code in Safari (iPhone) or Chrome (Android). No account is needed, and participants are always free.</p></div>
+        </details>
+        <details>
+          <summary>How is this different from Slido, Mentimeter, Teams or Zoom?</summary>
+          <div class="a"><p>Text Q&amp;A tools collect written questions for the host to read out; participants never speak. With CloudMic Live, a participant's phone becomes the microphone, so people talk from their seats — and polls and a question box are included.</p><p>Teams and Zoom deliberately mute extra microphones in the same room to prevent howling, so they are not designed to pick up questions from the floor. CloudMic Live plays the room's voices on the venue speakers and, if you like, sends them to Teams or Zoom at the same time.</p></div>
+        </details>
+        <details>
+          <summary>What is CloudMic Live not built for?</summary>
+          <div class="a"><p>A few things, and we would rather say so up front.</p><ol><li><b>1,000-seat halls.</b> It is designed for meeting rooms, classrooms and lecture rooms. A consumer Wi‑Fi router or a PC hotspot supports a limited number of phones reliably.</li><li><b>HDMI output to venue displays or pro audio connectors.</b> The screen view uses the host PC's display output and the audio uses the PC's speaker output.</li><li><b>Remote attendees.</b> Only people on the same Wi‑Fi can join; online attendees cannot speak through their phones.</li></ol><p>For large events that need these, a dedicated receiver-based system is the better fit.</p></div>
         </details>
         <details>
           <summary>What does the host app run on?</summary>

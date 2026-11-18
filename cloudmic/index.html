@@ -210,6 +210,28 @@
         <div class="cm-step reveal"><div class="n">2</div><h3>参加者が QR を読み取る</h3><p>画面に出る QR コードを、参加者がスマートフォンで読み取ります。インストール不要、ブラウザで開くだけ。</p></div>
         <div class="cm-step reveal"><div class="n">3</div><h3>許可すると、声が流れる</h3><p>参加者が「発言リクエスト」を押し、ホストが許可すると、その人の声が PC から流れます。</p></div>
       </div>
+      <!-- 使い方の動画（YouTube）。押すまで YouTube を読み込まない（表紙はサイトの中の絵。再生は youtube-nocookie） -->
+      <div class="cm-video reveal" style="max-width:880px;margin:40px auto 0">
+        <button type="button" class="cm-video-play" data-yt="8cOZINvr8Ws" aria-label="使い方の動画を再生する（約 3 分）" style="position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;border-radius:18px;overflow:hidden;cursor:pointer;background:#0b1512 url('/assets/img/cloudmic/video-poster-ja.jpg') center/cover no-repeat;box-shadow:0 30px 60px -30px rgba(5,80,55,.45)">
+          <span aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.35))">
+            <span style="width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25)"><svg viewBox="0 0 24 24" width="38" height="38"><path d="M8 5v14l11-7z" fill="#059669"/></svg></span>
+          </span>
+        </button>
+        <p style="text-align:center;font-size:14px;color:var(--muted,#5b6b63);margin-top:12px">使い方の動画（約 3 分・音声は合成です）。再生すると YouTube が読み込まれます。</p>
+      </div>
+      <script>
+        document.querySelectorAll('.cm-video-play').forEach(function (b) {
+          b.addEventListener('click', function () {
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.yt + '?autoplay=1&rel=0';
+            f.title = b.getAttribute('aria-label');
+            f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            f.allowFullscreen = true;
+            f.style.cssText = 'display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:18px';
+            b.replaceWith(f);
+          });
+        });
+      </script>
     </div>
   </section>
 

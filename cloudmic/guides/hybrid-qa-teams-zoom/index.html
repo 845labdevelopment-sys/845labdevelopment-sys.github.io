@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>会場とオンラインの同時開催で質疑応答をする方法 — 会場の質問を Teams・Zoom にも届ける | CloudMic Live</title>
+<meta name="description" content="会場の質問が、オンラインの参加者に聞こえない。ハイブリッド開催でよくある困りごとです。会場の人のスマホをマイクにして、その声を会場のスピーカーと Teams・Zoom の両方に出す手順を、無料の仮想ケーブルの設定から説明します。">
+<link rel="canonical" href="https://845labdevelopment-sys.github.io/cloudmic/guides/hybrid-qa-teams-zoom/">
+<link rel="alternate" hreflang="ja" href="https://845labdevelopment-sys.github.io/cloudmic/guides/hybrid-qa-teams-zoom/">
+<link rel="alternate" hreflang="en" href="https://845labdevelopment-sys.github.io/en/cloudmic/guides/hybrid-qa-teams-zoom/">
+<link rel="alternate" hreflang="x-default" href="https://845labdevelopment-sys.github.io/en/cloudmic/guides/hybrid-qa-teams-zoom/">
+<meta name="theme-color" content="#0B1B3A">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="845.Lab">
+<meta property="og:title" content="会場とオンラインの同時開催で、質疑応答をする方法">
+<meta property="og:description" content="会場の人のスマホをマイクにして、声を会場のスピーカーと Teams・Zoom の両方へ。仮想ケーブルの設定から。">
+<meta property="og:url" content="https://845labdevelopment-sys.github.io/cloudmic/guides/hybrid-qa-teams-zoom/">
+<meta property="og:image" content="https://845labdevelopment-sys.github.io/assets/img/cloudmic/og_cloudmic.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/cloudmic/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/cloudmic/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/cloudmic.css">
+<style>
+.cm-guide .cm-uc-trouble { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.cm-guide .cm-uc-trouble li { margin: 0; padding: 14px 18px 14px 44px; position: relative; background: var(--mist); border-radius: 14px; color: var(--ink); }
+.cm-guide .cm-uc-trouble li::before { content: "?"; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 700; line-height: 17px; text-align: center; }
+.cm-guide .cm-route { display: grid; gap: 10px; margin: 8px 0 0; padding: 18px 22px; background: var(--em-mist); border: 1px solid rgba(16,185,129,.25); border-radius: 16px; }
+.cm-guide .cm-route p { display: grid; grid-template-columns: 5.5em 1fr; gap: 4px 12px; margin: 0; font-size: 15px; line-height: 1.8; color: var(--ink); }
+.cm-guide .cm-route b { color: var(--em-deep); }
+.cm-guide ol.cm-howto { padding-left: 1.4em; margin: 0 0 16px; }
+.cm-guide ol.cm-howto > li { margin: 14px 0; }
+.cm-guide ol.cm-howto > li > b { display: block; color: var(--ink); }
+.cm-guide .callout { background: var(--mist); border-radius: 14px; padding: 18px 22px; margin: 0 0 18px; }
+.cm-guide .callout p { margin: 0 0 8px; }
+.cm-guide .callout p:last-child { margin-bottom: 0; }
+.cm-guide .cm-fig { margin: 28px 0; }
+.cm-guide .cm-fig img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 20px 50px -30px rgba(11,27,58,.45); }
+.cm-guide .cm-fig.narrow img { max-width: min(100%, 330px); }
+.cm-guide .cm-fig figcaption { font-size: 13.5px; color: var(--muted); margin-top: 10px; line-height: 1.7; }
+.cm-guide .faq { max-width: none; margin: 8px 0 0; }
+.cm-guide .cm-more { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14.5px; color: var(--muted); line-height: 2; }
+.cm-guide .cm-more a { margin-right: 18px; white-space: nowrap; }
+</style>
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"HowTo","name":"会場とオンラインの同時開催で、会場の質問を Teams・Zoom にも届ける","inLanguage":"ja","totalTime":"PT20M","tool":[{"@type":"HowToTool","name":"Windows 10 / 11 の PC（CloudMic Live と Teams または Zoom）"},{"@type":"HowToTool","name":"仮想ケーブル VB-CABLE（無料）"},{"@type":"HowToTool","name":"会場の参加者のスマートフォン"},{"@type":"HowToTool","name":"会場のスピーカー"}],"step":[{"@type":"HowToStep","name":"仮想ケーブルを入れる","text":"PC に VB-CABLE を入れ、PC を再起動する。最初の 1 回だけ。"},{"@type":"HowToStep","name":"主出力を会場のスピーカーにする","text":"CloudMic Live でイベントを作り、「出力先」の主出力を会場のスピーカー（または PC の既定の出力）にする。"},{"@type":"HowToStep","name":"もう 1 か所に仮想ケーブルを選ぶ","text":"「もう 1 か所にも出す」をオンにして、CABLE Input を選ぶ。"},{"@type":"HowToStep","name":"会議アプリのマイクを仮想ケーブルにする","text":"Teams や Zoom の設定で、マイクを CABLE Output にする。スピーカーは会場のスピーカーのままにする。"},{"@type":"HowToStep","name":"本番の前に試す","text":"会場のスマホから 1 人発言し、別の端末で会議に入って、オンライン側で聞こえるか確かめる。"}]},{"@type":"FAQPage","inLanguage":"ja","mainEntity":[{"@type":"Question","name":"仮想ケーブルはお金がかかりますか？","acceptedAnswer":{"@type":"Answer","text":"Windows の VB-CABLE、Mac の BlackHole は、どちらも無料で入手できます。配布元の案内にしたがって入れてください。"}},{"@type":"Question","name":"オンラインの参加者も、スマホから発言できますか？","acceptedAnswer":{"@type":"Answer","text":"できません。CloudMic Live に参加できるのは、主催者の PC と同じ Wi‑Fi にいる人だけです。オンラインの参加者は、いつもどおり Teams や Zoom のマイクで話し、その声は会議アプリから会場のスピーカーに流れます。"}},{"@type":"Question","name":"Google Meet でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"考え方は同じです。会議アプリのマイクに仮想ケーブル（Windows は CABLE Output）を選べば、会場の声が届きます。"}},{"@type":"Question","name":"会場の声は、外に送られますか？","acceptedAnswer":{"@type":"Answer","text":"CloudMic Live 自体は、声を開発者のサーバーや外部に送りません。ただし同時開催では、会議アプリに渡した声は、その会議アプリ（Teams や Zoom）の仕組みでオンラインの参加者に届けられます。"}}]}]}
+</script>
+<!-- CF_WEB_ANALYTICS: 訪問数計測（Cookie なし）。Cloudflare Web Analytics のトークン取得後、apply_to_site.py の --analytics-token でここに script が入る -->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand cm-brand" href="/cloudmic/" aria-label="CloudMic Live ホーム">
+      <img src="/assets/img/cloudmic/icon-192.png" alt="" width="28" height="28">
+      <span class="brand-name">CloudMic Live</span>
+      <span class="brand-by">by 845.Lab</span>
+    </a>
+    <nav class="nav" aria-label="メイン">
+      <a href="/cloudmic/">ホーム</a>
+      <a href="/cloudmic/#features">特長</a>
+      <a href="/cloudmic/#pricing">料金</a>
+      <a href="/cloudmic/#guides">ガイド</a>
+      <a class="lang" href="/en/cloudmic/guides/hybrid-qa-teams-zoom/" hreflang="en" lang="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc cm-doc cm-guide">
+  <div class="wrap">
+    <a class="cm-back" href="/cloudmic/#guides">ガイドの一覧へ</a>
+    <span class="eyebrow">ガイド · 会場とオンラインの同時開催</span>
+    <h1 class="cm-keep">会場とオンラインの<wbr>同時開催で、<wbr>質疑応答をする</h1>
+    <p class="updated">2026年11月26日 · 公開中のバージョン（0.9.2）でできることを書いています · 845.Lab</p>
+    <article>
+      <p>会場で質問が出る。オンラインで参加している人のチャットに「すみません、会場の質問が聞こえませんでした」と書き込まれる。司会が質問をもう一度言い直す——。会場と Teams・Zoom を同時に開く「ハイブリッド開催」で、よくある場面です。</p>
+      <ul class="cm-uc-trouble">
+        <li>会場の質問者の声が、オンラインの参加者に届かない</li>
+        <li>会議用のマイクは講師の前に 1 本だけで、客席の声は拾えない</li>
+        <li>会場で何台もの PC を会議に入れると、ハウリングしてしまう</li>
+        <li>毎回、司会が質問を復唱していて、時間がかかる</li>
+      </ul>
+      <p>Teams や Zoom は、同じ部屋で何台もの機器のマイクを入れるとハウリングするため、ふつうは会場の中で使うマイクを 1 か所にしぼります。客席の声をオンラインに届けるには、別の方法で会議アプリまで音を運ぶ必要があります。</p>
+
+      <h2 id="how-it-works">しくみ：会場の声を 2 か所に出す</h2>
+      <p>CloudMic Live では、会場の人のスマホがマイクになり、その声が主催者の PC に届きます。PC からは、会場のスピーカーと会議アプリの 2 か所に同時に声を出せます。会議アプリには、無料の「仮想ケーブル」という部品を通して音を渡します（OS の仕組み上、CloudMic Live が直接会議アプリのマイクになることはできません）。</p>
+      <div class="cm-route">
+        <p><b>会場</b>スマホで話す → 主催者の PC → 会場のスピーカー</p>
+        <p><b>オンライン</b>主催者の PC → 仮想ケーブル → Teams・Zoom のマイク → オンラインの参加者</p>
+      </div>
+
+      <h2 id="needs">用意するもの</h2>
+      <ul>
+        <li><strong>主催者の PC 1 台</strong>：Windows 10 / 11。CloudMic Live と、会議アプリ（Teams・Zoom など）を同じ PC で動かします。</li>
+        <li><strong>仮想ケーブル</strong>：Windows は VB-CABLE（vb-audio.com/Cable から無料で入手できます）。Mac では BlackHole（2ch）を使います。</li>
+        <li><strong>同じ Wi‑Fi</strong>：会場の参加者のスマホと PC が、同じ Wi‑Fi につながること。</li>
+        <li><strong>会場のスピーカー</strong>：PC につないで、会場の人に声を聞かせます。</li>
+      </ul>
+
+      <h2 id="steps">手順</h2>
+      <ol class="cm-howto">
+        <li><b>仮想ケーブルを入れる（最初の 1 回だけ）</b>VB-CABLE を入れたら、PC を再起動します。</li>
+        <li><b>CloudMic Live の「出力先」で、主出力を会場のスピーカーにする</b>イベントを作り、画面右の「参加者音声」の中にある「出力先」を開きます。主出力は、会場のスピーカー（または PC の既定の出力）にします。</li>
+        <li><b>「もう 1 か所にも出す」をオンにして、CABLE Input を選ぶ</b>機器の名前が出ないときは「機器の名前を表示する」を押します（マイクの許可が 1 回だけ出ます）。</li>
+        <li><b>会議アプリのマイクを、仮想ケーブルにする</b>Teams は「設定」→「デバイス」で、マイクを「CABLE Output」にします。Zoom は「設定」→「オーディオ」で、マイクを同じく「CABLE Output」にします。</li>
+        <li><b>会議アプリのスピーカーは、会場のスピーカーのままにする</b>オンラインの参加者の声を会場で聞くためです。スピーカーを仮想ケーブルにすると、会場では聞こえなくなります。</li>
+        <li><b>本番の前に、1 回試す</b>会場のスマホから 1 人発言してみて、別の端末で同じ会議に入り、オンライン側で聞こえるか確かめます。</li>
+      </ol>
+      <figure class="cm-fig narrow">
+        <img src="/assets/img/cloudmic/guide_output_ja.webp" alt="CloudMic Live の「出力先」の設定。主出力と、「もう 1 か所にも出す」のスイッチ、2 つ目の出力先の選択がある" width="330" height="480" loading="lazy">
+        <figcaption>「出力先」の設定。画面は例で、実際の同時開催では 2 つ目の出力先に「CABLE Input」を選びます。2 つ目への音は常に 100% で、ミュートの影響を受けません。</figcaption>
+      </figure>
+
+      <h2 id="tips">気をつけること</h2>
+      <ul>
+        <li><strong>講師・司会の声</strong>：会議アプリのマイクを仮想ケーブルにすると、PC のマイクからの声は会議に入らなくなります。講師や司会も、自分のスマホから参加者として入って話すのがいちばん簡単です。</li>
+        <li><strong>ハウリング</strong>：スマホと会場のスピーカーが近いとハウリングします。会場の音だけを一時的に止めたいときは、CloudMic Live のミュートを使えます（会議アプリへの音は出続けます）。</li>
+        <li><strong>オンラインの人の質問</strong>：オンラインの参加者は、CloudMic Live には入れません。いつもどおり会議アプリのマイクやチャットで質問してもらいます。</li>
+        <li><strong>会議アプリの仕様</strong>：会議アプリの雑音を抑える機能などで、声の聞こえ方が変わることがあります。本番の前の確認をおすすめします。</li>
+      </ul>
+
+      <h2 id="faq">よくある質問</h2>
+      <div class="faq cm-faq">
+        <details>
+          <summary>仮想ケーブルはお金がかかりますか？</summary>
+          <div class="a"><p>Windows の VB-CABLE、Mac の BlackHole は、どちらも無料で入手できます。配布元の案内にしたがって入れてください。</p></div>
+        </details>
+        <details>
+          <summary>オンラインの参加者も、スマホから発言できますか？</summary>
+          <div class="a"><p>できません。CloudMic Live に参加できるのは、主催者の PC と同じ Wi‑Fi にいる人だけです。オンラインの参加者は、いつもどおり Teams や Zoom のマイクで話し、その声は会議アプリから会場のスピーカーに流れます。</p></div>
+        </details>
+        <details>
+          <summary>Google Meet でも使えますか？</summary>
+          <div class="a"><p>考え方は同じです。会議アプリのマイクに仮想ケーブル（Windows は CABLE Output）を選べば、会場の声が届きます。</p></div>
+        </details>
+        <details>
+          <summary>会場の声は、外に送られますか？</summary>
+          <div class="a"><p>CloudMic Live 自体は、声を開発者のサーバーや外部に送りません。ただし同時開催では、会議アプリに渡した声は、その会議アプリ（Teams や Zoom）の仕組みでオンラインの参加者に届けられます。</p></div>
+        </details>
+      </div>
+
+      <p class="cm-more"><strong>使う場面：</strong> <a href="/cloudmic/training/">社内研修・勉強会・セミナー</a> <a href="/cloudmic/town-meeting/">住民説明会・自治会・PTA</a><br><strong>ほかのガイド：</strong> <a href="/cloudmic/guides/qa-without-passing-mic/">質疑応答でマイクを回す手間をなくす</a> <a href="/cloudmic/guides/smartphone-as-wireless-mic/">スマホをワイヤレスマイクの代わりにする</a></p>
+    </article>
+  </div>
+</main>
+
+<section class="section cta platforms cm-download" id="download">
+  <div class="wrap">
+    <img class="icon" src="/assets/img/cloudmic/icon-192.png" alt="" width="88" height="88">
+    <h2 class="cm-keep">会場の声を、<wbr>オンラインにも。</h2>
+    <p>ホスト用アプリは Windows 10 / 11 向け。参加者 5 人までは無料で試せます。会場の参加者は、インストールなしで参加できます。</p>
+    <div class="stores">
+      <a class="btn dark primary" id="ms-store-link" href="https://apps.microsoft.com/detail/9NC0G8R0DRW5?cid=guide-hybrid" rel="noopener"><span><small>Windows 10 / 11</small><b>Microsoft Store で入手</b></span></a>
+    </div>
+    <p class="meta">ご質問は <a href="mailto:845labsupport@gmail.com">845labsupport@gmail.com</a> まで</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="cm-brand" href="/cloudmic/"><img src="/assets/img/cloudmic/icon-192.png" alt="" width="24" height="24"><span class="brand-name">CloudMic Live</span></a>
+      <p>スマホをマイクにして、発言を PC から管理。<br>開発: 845.Lab</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="/cloudmic/#features">特長</a></li>
+        <li><a href="/cloudmic/#how">使い方</a></li>
+        <li><a href="/cloudmic/#pricing">料金</a></li>
+        <li><a href="/cloudmic/#guides">ガイド一覧</a></li>
+        <li><a href="/cloudmic/#faq">よくある質問</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="/cloudmic/privacy/">プライバシーポリシー</a></li>
+        <li><a href="mailto:845labsupport@gmail.com">お問い合わせ</a></li>
+        <li><a href="/en/cloudmic/guides/hybrid-qa-teams-zoom/" hreflang="en" lang="en">English</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>© 2026 845.Lab</span>
+      <span>Microsoft Store・Windows・Teams は Microsoft Corporation の商標です。Zoom は Zoom Communications, Inc. の商標です。Google Meet は Google LLC の商標です。iPhone・Safari・Mac は Apple Inc. の商標です。VB-CABLE は VB-Audio Software の製品、BlackHole は Existential Audio の製品です。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

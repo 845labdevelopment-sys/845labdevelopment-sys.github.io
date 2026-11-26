@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Audience Q&amp;A without passing the mic around: use phones as microphones | CloudMic Live</title>
+<meta name="description" content="Stop running a mic up and down the aisles. Turn attendees' phones into microphones and approve speakers from your PC. What you need, step-by-step setup and tips. Free for up to 5 participants.">
+<link rel="canonical" href="https://845labdevelopment-sys.github.io/en/cloudmic/guides/qa-without-passing-mic/">
+<link rel="alternate" hreflang="ja" href="https://845labdevelopment-sys.github.io/cloudmic/guides/qa-without-passing-mic/">
+<link rel="alternate" hreflang="en" href="https://845labdevelopment-sys.github.io/en/cloudmic/guides/qa-without-passing-mic/">
+<link rel="alternate" hreflang="x-default" href="https://845labdevelopment-sys.github.io/en/cloudmic/guides/qa-without-passing-mic/">
+<meta name="theme-color" content="#0B1B3A">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="845.Lab">
+<meta property="og:title" content="Run audience Q&amp;A without passing the mic">
+<meta property="og:description" content="Turn attendees' phones into microphones and approve speakers from your PC. What you need and the steps.">
+<meta property="og:url" content="https://845labdevelopment-sys.github.io/en/cloudmic/guides/qa-without-passing-mic/">
+<meta property="og:image" content="https://845labdevelopment-sys.github.io/assets/img/cloudmic/og_cloudmic.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/cloudmic/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/cloudmic/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/cloudmic.css">
+<style>
+.cm-guide .cm-uc-trouble { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.cm-guide .cm-uc-trouble li { margin: 0; padding: 14px 18px 14px 44px; position: relative; background: var(--mist); border-radius: 14px; color: var(--ink); }
+.cm-guide .cm-uc-trouble li::before { content: "?"; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 700; line-height: 17px; text-align: center; }
+.cm-guide ol.cm-howto { padding-left: 1.4em; margin: 0 0 16px; }
+.cm-guide ol.cm-howto > li { margin: 14px 0; }
+.cm-guide ol.cm-howto > li > b { display: block; color: var(--ink); }
+.cm-guide .cm-fig { margin: 28px 0; }
+.cm-guide .cm-fig img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 20px 50px -30px rgba(11,27,58,.45); }
+.cm-guide .cm-fig.phone-shot img { max-width: min(100%, 260px); }
+.cm-guide .cm-fig figcaption { font-size: 13.5px; color: var(--muted); margin-top: 10px; line-height: 1.7; }
+.cm-guide .faq { max-width: none; margin: 8px 0 0; }
+.cm-guide .cm-more { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14.5px; color: var(--muted); line-height: 2; }
+.cm-guide .cm-more a { margin-right: 18px; white-space: nowrap; }
+</style>
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"HowTo","name":"Run audience Q&A without passing the microphone, using attendees' phones as mics","inLanguage":"en","totalTime":"PT10M","tool":[{"@type":"HowToTool","name":"A Windows 10 / 11 PC with CloudMic Live"},{"@type":"HowToTool","name":"Attendees' smartphones"},{"@type":"HowToTool","name":"The PC and attendees on the same Wi‑Fi"}],"step":[{"@type":"HowToStep","name":"Create an event","text":"Before the session, create an event in CloudMic Live on the PC and set the speaking mode to request and approve."},{"@type":"HowToStep","name":"Let people join by QR code","text":"At the start, show the join QR code on the screen. Attendees scan it with their phone, open it in the browser and enter a name."},{"@type":"HowToStep","name":"Ask people to tap Request to speak","text":"When Q&A starts, ask anyone with a question to tap “Request to speak” on their phone."},{"@type":"HowToStep","name":"Approve them in turn on the PC","text":"Approve the people listed on the PC screen one by one. That person's phone becomes the microphone and their voice plays from the room speakers."},{"@type":"HowToStep","name":"Move on to the next person","text":"When they finish, they tap “Stop speaking” or the host ends it from the PC, and the host approves the next person."}]},{"@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Do attendees need to install an app?","acceptedAnswer":{"@type":"Answer","text":"No. They open the QR code in Safari on iPhone or Chrome on Android. No account is needed, and participants are always free."}},{"@type":"Question","name":"How many people can join?","acceptedAnswer":{"@type":"Answer","text":"Up to 5 participants are free. For bigger groups, choose an Event Pass (US$4.99, 24 hours) or Monthly US$9.99 / Yearly US$69.99. How many people connect reliably depends on your PC and Wi‑Fi, so measure it before the session with the app's Venue check."}},{"@type":"Question","name":"Is anyone's voice sent anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Voices reach the PC over the same Wi‑Fi and are played on the spot. Only when a Monthly or Yearly host uses the recording feature is audio saved, and only on the host's PC; participants' screens then show Recording."}},{"@type":"Question","name":"Can people joining online hear the questions asked in the room?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can play in-room questioners on the room speakers and send them to Teams or Zoom at the same time. The steps are in the guide on hybrid Q&A with Teams or Zoom."}}]}]}
+</script>
+<!-- CF_WEB_ANALYTICS: 訪問数計測（Cookie なし）。Cloudflare Web Analytics のトークン取得後、apply_to_site.py の --analytics-token でここに script が入る -->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand cm-brand" href="/en/cloudmic/" aria-label="CloudMic Live home">
+      <img src="/assets/img/cloudmic/icon-192.png" alt="" width="28" height="28">
+      <span class="brand-name">CloudMic Live</span>
+      <span class="brand-by">by 845.Lab</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/en/cloudmic/">Home</a>
+      <a href="/en/cloudmic/#features">Features</a>
+      <a href="/en/cloudmic/#pricing">Pricing</a>
+      <a href="/en/cloudmic/#guides">Guides</a>
+      <a class="lang" href="/cloudmic/guides/qa-without-passing-mic/" hreflang="ja" lang="ja">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc cm-doc cm-guide">
+  <div class="wrap">
+    <a class="cm-back" href="/en/cloudmic/#guides">All guides</a>
+    <span class="eyebrow">Guide · Audience Q&amp;A</span>
+    <h1 class="cm-keep">Run audience Q&amp;A<wbr> without passing the mic around</h1>
+    <p class="updated">November 26, 2026 · Covers what the published version (0.9.2) can do · 845.Lab</p>
+    <article>
+      <p>“Any questions? Please raise your hand.” A hand goes up, and someone hurries over with the microphone — down the aisle, past bags and knees. The room waits in silence until it arrives, and when the question is done, the mic has to make its way back again.</p>
+      <p>Each hand-off only takes a moment, but when several people have questions, those moments add up and eat into Q&amp;A. Does any of this sound familiar?</p>
+      <ul class="cm-uc-trouble">
+        <li>You need a person whose only job is to carry the mic around</li>
+        <li>Everyone sits in silence while the mic travels</li>
+        <li>There is only one mic, so the next person has to wait</li>
+        <li>People don't ask, because raising a hand and taking a mic in front of everyone feels like too much</li>
+      </ul>
+
+      <h2 id="idea">The idea: stop passing one mic, and give everyone their own</h2>
+      <p>Almost everyone in the room already has a smartphone. If each phone can be a microphone, nothing needs to be carried around. The only thing left to decide is who speaks next, and the host can do that by approving people on a PC.</p>
+      <p>This guide uses <a href="/en/cloudmic/">CloudMic Live</a> by 845.Lab. Attendees just scan a QR code — there is nothing to install. Their voice travels over the same Wi‑Fi to the host's PC and plays from the speakers connected to it.</p>
+
+      <h2 id="needs">What you need</h2>
+      <ul>
+        <li><strong>One PC for the host</strong>: Windows 10 / 11, with CloudMic Live installed free from Microsoft Store.</li>
+        <li><strong>The same Wi‑Fi</strong>: the PC and attendees' phones on the same Wi‑Fi. No internet connection is needed.</li>
+        <li><strong>Speakers</strong>: the PC's own speakers, or the room's sound system connected to the PC.</li>
+        <li><strong>Nice to have</strong>: a projector or large display to show the join QR code.</li>
+      </ul>
+
+      <h2 id="steps">Steps on the day</h2>
+      <ol class="cm-howto">
+        <li><b>Before the session, create an event on the PC</b>Launch CloudMic Live and create an event. Set the speaking mode to request and approve (people raise a hand on their phone and the host approves them).</li>
+        <li><b>At the start, let people join by QR code</b>Show the join QR code on the screen or on a slide. Attendees scan it with their phone camera, open it in the browser and enter a name. The first time a phone connects, the browser may show a security warning (<a href="/en/cloudmic/guides/smartphone-as-wireless-mic/#warning">how to get past it</a>).</li>
+        <li><b>When Q&amp;A starts, say one sentence</b>“If you have a question, tap ‘Request to speak’ on your phone.” Tapping replaces raising a hand.</li>
+        <li><b>Approve people in turn on the PC</b>Everyone who tapped appears on the PC screen. Click approve, and that person's phone becomes the microphone; their voice plays from the room speakers. People waiting see their place in line on their phone, such as “You are number 3 in line”.</li>
+        <li><b>When they're done, move on</b>The speaker taps “Stop speaking” on their phone, or the host ends it from the PC. Then approve the next person.</li>
+      </ol>
+      <figure class="cm-fig">
+        <img src="/assets/img/cloudmic/02_host_dashboard.webp" alt="The host's PC screen: people waiting for approval and participants on the left, the current speaker in the center" width="1280" height="720" loading="lazy">
+        <figcaption>The host's screen. People waiting for approval are listed on the left; approve one and they can speak. (Screenshot shows the Japanese interface; the app also runs in English.)</figcaption>
+      </figure>
+      <figure class="cm-fig phone-shot">
+        <img src="/assets/img/cloudmic/06_participant_idle.webp" alt="An attendee's phone, with a large Request to speak button" width="720" height="1558" loading="lazy">
+        <figcaption>An attendee's phone. They tap “Request to speak” to raise a hand.</figcaption>
+      </figure>
+
+      <h2 id="tips">Tips for a smooth Q&amp;A</h2>
+      <ul>
+        <li><strong>Set a speaking time limit</strong>: with a time limit, the time remaining appears on the screen, which keeps any one question from running too long.</li>
+        <li><strong>A question box for people who'd rather not speak up</strong>: questions can be sent in writing, anonymously if they like, and are sorted by likes so you can answer the questions most people share. See the <a href="/en/cloudmic/school/">classroom page</a> for how this works in class.</li>
+        <li><strong>Want to hear from someone in particular?</strong> Ask them to speak from the PC, or pick one participant at random.</li>
+        <li><strong>Watch out for feedback</strong>: holding a phone too close to the room speakers can cause feedback. The app shows how loud each voice is and warns you when feedback is likely.</li>
+        <li><strong>Test beforehand</strong>: the app's Venue check measures in about 10 seconds how many people can connect reliably with that PC and Wi‑Fi.</li>
+      </ul>
+
+      <h2 id="not-for">Where it doesn't fit</h2>
+      <p>Better to say this up front.</p>
+      <ul>
+        <li><strong>Large halls with around 1,000 people</strong>: it is designed for meeting rooms, classrooms and community halls. A home Wi‑Fi router or the PC's hotspot can only handle so many people reliably.</li>
+        <li><strong>Venues where attendees can't join the same Wi‑Fi</strong>: there is no way to join remotely over the internet. If the venue's Wi‑Fi blocks devices from reaching each other, phones can connect to the PC's Mobile hotspot instead.</li>
+      </ul>
+
+      <h2 id="faq">Common questions</h2>
+      <div class="faq cm-faq">
+        <details>
+          <summary>Do attendees need to install an app?</summary>
+          <div class="a"><p>No. They open the QR code in Safari on iPhone or Chrome on Android. No account is needed, and participants are always free.</p></div>
+        </details>
+        <details>
+          <summary>How many people can join?</summary>
+          <div class="a"><p>Up to 5 participants are free. For bigger groups, choose an Event Pass (US$4.99, 24 hours) or Monthly US$9.99 / Yearly US$69.99. How many people connect reliably depends on your PC and Wi‑Fi, so measure it before the session with the app's Venue check.</p></div>
+        </details>
+        <details>
+          <summary>Is anyone's voice sent anywhere?</summary>
+          <div class="a"><p>No. Voices reach the PC over the same Wi‑Fi and are played on the spot. Only when a Monthly or Yearly host uses the recording feature is audio saved, and only on the host's PC; participants' screens then show “Recording”.</p></div>
+        </details>
+        <details>
+          <summary>Can people joining online hear the questions asked in the room?</summary>
+          <div class="a"><p>Yes. You can play in-room questioners on the room speakers and send them to Teams or Zoom at the same time. See <a href="/en/cloudmic/guides/hybrid-qa-teams-zoom/">Hybrid Q&amp;A with Teams or Zoom</a> for the steps.</p></div>
+        </details>
+      </div>
+
+      <p class="cm-more"><strong>Use cases:</strong> <a href="/en/cloudmic/training/">Training &amp; seminars</a> <a href="/en/cloudmic/town-meeting/">Town halls &amp; community meetings</a> <a href="/en/cloudmic/school/">Classrooms</a><br><strong>More guides:</strong> <a href="/en/cloudmic/guides/smartphone-as-wireless-mic/">Use your phone as a wireless mic</a> <a href="/en/cloudmic/guides/hybrid-qa-teams-zoom/">Hybrid Q&amp;A with Teams or Zoom</a></p>
+    </article>
+  </div>
+</main>
+
+<section class="section cta platforms cm-download" id="download">
+  <div class="wrap">
+    <img class="icon" src="/assets/img/cloudmic/icon-192.png" alt="" width="88" height="88">
+    <h2 class="cm-keep">Stop passing the mic<wbr> at your next Q&amp;A.</h2>
+    <p>The host app is for Windows 10 / 11. Free for up to five participants, and attendees join from the phone they already have, with nothing to install.</p>
+    <div class="stores">
+      <a class="btn dark primary" id="ms-store-link" href="https://apps.microsoft.com/detail/9NC0G8R0DRW5?cid=guide-en-qa" rel="noopener"><span><small>Windows 10 / 11</small><b>Get it from Microsoft Store</b></span></a>
+    </div>
+    <p class="meta">Questions? <a href="mailto:845labsupport@gmail.com">845labsupport@gmail.com</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="cm-brand" href="/en/cloudmic/"><img src="/assets/img/cloudmic/icon-192.png" alt="" width="24" height="24"><span class="brand-name">CloudMic Live</span></a>
+      <p>Phones as microphones, managed from your PC.<br>Made by 845.Lab</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="/en/cloudmic/#features">Features</a></li>
+        <li><a href="/en/cloudmic/#how">How it works</a></li>
+        <li><a href="/en/cloudmic/#pricing">Pricing</a></li>
+        <li><a href="/en/cloudmic/#guides">All guides</a></li>
+        <li><a href="/en/cloudmic/#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="/en/cloudmic/privacy/">Privacy policy</a></li>
+        <li><a href="mailto:845labsupport@gmail.com">Contact</a></li>
+        <li><a href="/cloudmic/guides/qa-without-passing-mic/" hreflang="ja" lang="ja">日本語</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>© 2026 845.Lab</span>
+      <span>Microsoft Store and Teams are trademarks of Microsoft Corporation. Zoom is a trademark of Zoom Communications, Inc. iPhone and Safari are trademarks of Apple Inc. Android and Chrome are trademarks of Google LLC.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

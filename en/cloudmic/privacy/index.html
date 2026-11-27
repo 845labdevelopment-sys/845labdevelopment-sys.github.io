@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy Policy | CloudMic Live</title>
-<meta name="description" content="Privacy Policy for CloudMic Live by 845.Lab. Audio and event data stay between the host's PC and participants' devices on the local network; nothing is sent to the developer.">
+<meta name="description" content="CloudMic Live (845.Lab) privacy policy. In the desktop app, audio and event data stay between the host's PC and participants' devices. The browser version relays messages through Cloudflare without storing their content.">
 <link rel="canonical" href="https://845labdevelopment-sys.github.io/en/cloudmic/privacy/">
 <link rel="alternate" hreflang="ja" href="https://845labdevelopment-sys.github.io/cloudmic/privacy/">
 <link rel="alternate" hreflang="en" href="https://845labdevelopment-sys.github.io/en/cloudmic/privacy/">
@@ -39,7 +39,7 @@
     <a class="cm-back" href="/en/cloudmic/">Back to CloudMic Live</a>
     <span class="eyebrow">Privacy Policy</span>
     <h1>CloudMic Live Privacy Policy</h1>
-    <p class="updated">Last updated: November 10, 2026 · 845.Lab · <a href="/cloudmic/privacy/" hreflang="ja" lang="ja">日本語</a></p>
+    <p class="updated">Last updated: November 27, 2026 · 845.Lab · <a href="/cloudmic/privacy/" hreflang="ja" lang="ja">日本語</a></p>
     <div class="cm-doc-grid">
       <nav class="cm-toc" aria-label="Contents">
         <h2>Contents</h2>
@@ -47,6 +47,7 @@
           <li><a href="#about">What the app does</a></li>
           <li><a href="#data">Information handled</a></li>
           <li><a href="#storage">Storage and transmission</a></li>
+          <li><a href="#browser">Browser version</a></li>
           <li><a href="#not-used">Information not used</a></li>
           <li><a href="#microphone">Microphone permission</a></li>
           <li><a href="#purchases">Purchases</a></li>
@@ -55,10 +56,10 @@
         </ol>
       </nav>
       <article>
-<div class="summary"><p>In short: audio and event data stay between the host's PC and the participants' devices, and nothing is sent to the developer. Audio is normally not stored; only a paid plan's recording feature saves a file, and only on the host's PC.</p></div>
+<div class="summary"><p>In short: in the desktop app (used on the venue's Wi-Fi), audio and event data stay between the host's PC and the participants' devices, and nothing is sent to the developer. The browser version (cloudmiclive.com) relays messages through Cloudflare but does not store their content. Audio is normally not stored; only a paid plan's recording feature saves a file, and only on the host's PC.</p></div>
 
 <h2 id="about">What the app does</h2>
-<p>CloudMic Live turns smartphones on the same Wi-Fi network into microphones and lets the host manage who speaks (requests, permissions, mute) from a PC. The host app runs a small server on the PC; participants connect to it from their phone's browser.</p>
+<p>CloudMic Live turns smartphones on the same Wi-Fi network into microphones and lets the host manage who speaks (requests, permissions, mute) from a PC. The host app runs a small server on the PC; participants connect to it from their phone's browser. The browser version (<a href="https://cloudmiclive.com">https://cloudmiclive.com</a>) works over the internet without installing anything.</p>
 
 <h2 id="data">Information handled</h2>
 <ul>
@@ -69,10 +70,22 @@
 </ul>
 
 <h2 id="storage">Storage and transmission</h2>
-<p>All of this stays between the host's PC and the participants' devices on the local network. Nothing is sent to the developer or to third-party services. <strong>Audio is normally played back live and not stored.</strong> Only when the host uses the recording feature of a paid plan is an audio file saved, and only on the host's own PC; nothing is sent to the developer or any server. While recording, every participant's screen shows a "Recording" indicator. The speech log (who spoke when and for how long) likewise stays on the host's PC. Event state is kept temporarily in the host's browser for the duration of the event. The passcode is checked only on the host's PC and is never distributed to participants.</p>
+<p>In the desktop app, all of this stays between the host's PC and the participants' devices on the local network. Nothing is sent to the developer or to third-party services. <strong>Audio is normally played back live and not stored.</strong> Only when the host uses the recording feature of a paid plan is an audio file saved, and only on the host's own PC; nothing is sent to the developer or any server. While recording, every participant's screen shows a "Recording" indicator. The speech log (who spoke when and for how long) likewise stays on the host's PC. Event state is kept temporarily in the host's browser for the duration of the event. The passcode is checked only on the host's PC and is never distributed to participants.</p>
+<h3 id="browser">When you use the browser version (cloudmiclive.com)</h3>
+<p>The browser version works over the internet without installing anything. To relay messages between the host's screen and participants' screens, it uses services from Cloudflare, Inc. (United States): Cloudflare Workers, Durable Objects and Realtime TURN.</p>
+<ul>
+<li><strong>Message relay</strong>: display names and event messages (speech requests, permissions and so on) pass through Cloudflare's servers on their way between the host and participants. They are relayed only and their content is not stored.</li>
+<li><strong>Room record</strong>: only while a room is open, we keep the room ID, its end time, whether it is a trial or Pro room, a fingerprint of the host key (not the key itself) and the participants' temporary identifiers on Cloudflare. They are deleted when the room ends.</li>
+<li><strong>Audio</strong>: sent directly from the participant's device to the host's device. When a direct connection is not possible (for example on a phone's mobile network), it passes through Cloudflare's relay (TURN); it is encrypted, cannot be read there, and is not stored.</li>
+<li><strong>IP address</strong>: to count free trials and prevent abuse, we keep only an irreversible fingerprint of the IP address (mixed with a secret value) for up to about 2 days. The IP address itself is not kept.</li>
+<li><strong>Usage totals</strong>: we keep only daily totals (number of rooms, number of messages, connected time and so on) for up to 45 days to run the service. They contain no names or speech content.</li>
+<li><strong>Logs</strong>: to investigate problems, a sample of request records (time, path, result and so on) is kept for a short period (a few days) in Cloudflare's logging feature. By the way Cloudflare works, these may include information about where the connection came from.</li>
+<li><strong>Pro license key</strong>: sent when creating a Pro room so that its validity can be checked. It is checked only, not stored.</li>
+</ul>
+<p>Cloudflare's handling is also subject to Cloudflare's privacy policy (<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">https://www.cloudflare.com/privacypolicy/</a>).</p>
 
 <h2 id="not-used">Information not used</h2>
-<p>No location, contacts, photos or account data. No analytics or advertising SDKs. The notice shown on the participant screen in the free tier is bundled with the app and loads nothing from the internet.</p>
+<p>No location, contacts, photos or account data. No analytics or advertising SDKs, in either the app or the browser version. The notice shown on the participant screen in the free tier is bundled with the app and loads nothing from the internet.</p>
 
 <h3 id="website">About this website</h3>
 <p>This website (845labdevelopment-sys.github.io) uses Cloudflare Web Analytics to count page visits. It sets no cookies and collects no device identifiers or personal information (only page URL, referrer, browser type and approximate region are aggregated). The app itself contains no analytics of any kind, including this one.</p>
@@ -81,10 +94,10 @@
 <p>Participants grant microphone access in their browser and can revoke it at any time in their device settings. The microphone is used only between "Start speaking" and "Stop speaking".</p>
 
 <h2 id="purchases">Purchases</h2>
-<p>Paid plans are processed by the store that distributes the app. The developer never receives payment details.</p>
+<p>Paid plans are processed by the store that distributes the app. The developer never receives payment details. The browser version currently has no purchases (Pro works with a license key bought in the app).</p>
 
 <h2 id="children">Children</h2>
-<p>The app is not directed at any particular age group and collects no personal information.</p>
+<p>The app is not directed at any particular age group and collects no personal information such as email addresses or phone numbers.</p>
 
 <h2 id="contact">Changes and contact</h2>
 <p>Changes will be posted on this page with a new date. Questions: <a href="mailto:845labsupport@gmail.com">845labsupport@gmail.com</a>.</p>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>845.Lab｜個人でアプリを作っています</title>
+<title>845.Lab｜会議も、コピーも、質疑応答も。</title>
 <meta name="description" content="845.Lab のアプリ：根拠つきの AI 議事録「MeetVerity」、スマホと PC でコピーを分け合う「AirBoard」、参加者のスマホがマイクになる「CloudMic Live」。">
 <link rel="canonical" href="https://845labdevelopment-sys.github.io/">
 <link rel="alternate" hreflang="ja" href="https://845labdevelopment-sys.github.io/">
@@ -12,91 +12,360 @@
 <meta name="theme-color" content="#0B1B3A">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="845.Lab">
-<meta property="og:title" content="845.Lab｜個人でアプリを作っています">
+<meta property="og:title" content="845.Lab｜会議も、コピーも、質疑応答も。">
 <meta property="og:description" content="MeetVerity・AirBoard・CloudMic Live">
 <meta property="og:url" content="https://845labdevelopment-sys.github.io/">
 <meta property="og:locale" content="ja_JP">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
-<link rel="stylesheet" href="/assets/cloudmic.css">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-.hub-brand { font-weight: 800; font-size: 20px; letter-spacing: .02em; color: var(--navy); text-decoration: none; }
-.hub-hero { padding: clamp(56px, 8vw, 96px) 0 clamp(24px, 4vw, 40px); }
-.hub-hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; margin: 12px 0 0; color: var(--navy); }
-.hub-list { padding: 0 0 clamp(72px, 9vw, 120px); }
-.hub-list .cm-app .more { flex-wrap: wrap; row-gap: 8px; }
-@media (max-width: 900px) { .hub-list .cm-apps { grid-template-columns: 1fr; } }
+/* 845.Lab 入口ページ（2026-11 作り直し）。Layout: 暗い計器の帯（3 本の信号が流れる）→ アプリごとに「文」と「小さな場面」を左右交互に → 静かな足元 */
+:root {
+  --paper: #F5F7FB;      /* 地。わずかに青へ寄せた白 */
+  --surface: #FFFFFF;
+  --ink: #0B1B3A;        /* 845.Lab の紺（既存のサイトと同じ） */
+  --text: #2A3550;
+  --muted: #5E6A84;
+  --line: #DCE2EE;
+  --band: #0B1B3A;       /* 頭の帯（両方の配色で同じ紺） */
+  --band-ink: #F2F5FF;
+  --band-muted: #9AA8C7;
+  --mv: #4058F0;         /* MeetVerity の藍 */
+  --mv-soft: #E8ECFF;
+  --mv-mint: #4FD8A8;
+  --ab: #0284C7;         /* AirBoard の空色（文字にも読める濃さ） */
+  --ab-soft: #E3F4FD;
+  --cm: #0E9F6E;         /* CloudMic Live の緑 */
+  --cm-soft: #DFF6EC;
+  --shadow: 0 1px 2px rgba(11,27,58,.06), 0 12px 32px rgba(11,27,58,.08);
+  --f-display: "Bricolage Grotesque", "Zen Kaku Gothic New", system-ui, sans-serif;
+  --f-body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0A1226; --surface: #111C36; --ink: #EEF2FF; --text: #C9D2E8; --muted: #8E9BB9; --line: #22304F;
+    --band: #060C1C; --band-ink: #F2F5FF; --band-muted: #8E9BB9;
+    --mv: #8D9CFF; --mv-soft: #1B2554; --mv-mint: #5FE0B4;
+    --ab: #5BC6F7; --ab-soft: #0F2B40; --cm: #34D399; --cm-soft: #0E2E25;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0A1226; --surface: #111C36; --ink: #EEF2FF; --text: #C9D2E8; --muted: #8E9BB9; --line: #22304F;
+  --band: #060C1C; --band-ink: #F2F5FF; --band-muted: #8E9BB9;
+  --mv: #8D9CFF; --mv-soft: #1B2554; --mv-mint: #5FE0B4;
+  --ab: #5BC6F7; --ab-soft: #0F2B40; --cm: #34D399; --cm-soft: #0E2E25;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.35);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+body { background: var(--paper); color: var(--text); font-family: var(--f-body); font-size: 16px; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--mv); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+
+/* ---------- 頭の帯 ---------- */
+.band { position: relative; overflow: hidden; background: var(--band); color: var(--band-ink);
+  padding-top: env(safe-area-inset-top, 0px); }
+.band canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.band::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(120% 80% at 50% 120%, transparent 40%, var(--band) 85%); opacity: .55; }
+.topbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding-block: 20px; }
+.topbar .mark { font-family: var(--f-display); font-weight: 800; font-size: 18px; letter-spacing: .01em; text-decoration: none; }
+.topbar nav { display: flex; gap: 6px; }
+.topbar nav a { text-decoration: none; color: var(--band-muted); font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); }
+.topbar nav a:hover { color: var(--band-ink); border-color: rgba(255,255,255,.35); }
+.hero { position: relative; z-index: 2; padding-block: clamp(48px, 9vw, 112px) clamp(56px, 9vw, 120px); }
+.hero .mono { color: var(--band-muted); }
+.wordmark { font-family: var(--f-display); font-weight: 800; font-size: clamp(64px, 15vw, 188px); line-height: .9; letter-spacing: -.045em; margin: 18px 0 0; font-variation-settings: "opsz" 96; }
+.wordmark .dot { color: var(--mv-mint); }
+.lead { font-size: clamp(22px, 3.2vw, 34px); font-weight: 700; line-height: 1.45; margin: clamp(24px, 3vw, 36px) 0 0; text-wrap: balance; color: var(--band-ink); }
+.sub { color: var(--band-muted); margin: 12px 0 0; max-width: 34em; }
+.jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+.jump a { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; padding: 8px 16px 8px 8px; border-radius: 999px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); font-weight: 700; font-size: 15px; transition: background .2s, transform .2s; }
+.jump a:hover { background: rgba(255,255,255,.13); transform: translateY(-1px); }
+.jump img { width: 28px; height: 28px; border-radius: 8px; }
+.jump .sig { width: 8px; height: 8px; border-radius: 50%; }
+
+/* ---------- アプリ ---------- */
+.apps { padding-block: clamp(56px, 8vw, 104px); display: grid; gap: clamp(72px, 10vw, 128px); }
+.app { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(32px, 5vw, 72px); align-items: center; scroll-margin-top: 24px; }
+.app:nth-child(even) .copy { order: 2; }
+.copy { min-width: 0; }
+.kicker { display: flex; align-items: center; gap: 10px; color: var(--accent); }
+.kicker::before { content: ""; width: 22px; height: 2px; background: currentColor; border-radius: 2px; }
+.head { display: flex; align-items: center; gap: 16px; margin-top: 18px; }
+.head img { width: 64px; height: 64px; border-radius: 16px; box-shadow: var(--shadow); }
+.head h2 { font-family: var(--f-display); font-weight: 800; font-size: clamp(34px, 4.4vw, 52px); letter-spacing: -.03em; line-height: 1; margin: 0; color: var(--ink); }
+.head h2 a { text-decoration: none; }
+.tag { font-size: clamp(18px, 1.8vw, 21px); font-weight: 700; color: var(--ink); line-height: 1.65; margin: 22px 0 0; text-wrap: pretty; max-width: 30em; }
+.plat { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+.plat li { font-family: var(--f-mono); font-size: 12px; letter-spacing: .04em; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--line); color: var(--muted); background: var(--surface); }
+.plat li.soon { border-style: dashed; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 12px; font-weight: 700; font-size: 15px; text-decoration: none; transition: transform .15s, background .2s, border-color .2s; }
+.btn.primary { background: var(--accent); color: var(--surface); }
+.btn.primary:hover { transform: translateY(-1px); }
+.btn.store { border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+.btn.store:hover { border-color: var(--accent); }
+.btn svg { width: 16px; height: 16px; }
+
+/* 場面の台 */
+.stage { position: relative; min-width: 0; border-radius: 28px; background: var(--soft); padding: clamp(22px, 4vw, 44px); overflow: hidden; isolation: isolate; }
+.stage::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .5;
+  background-image: radial-gradient(var(--accent) 1px, transparent 1.2px); background-size: 18px 18px;
+  mask-image: radial-gradient(80% 70% at 70% 30%, #000 10%, transparent 70%); -webkit-mask-image: radial-gradient(80% 70% at 70% 30%, #000 10%, transparent 70%); }
+.card { background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); padding: 18px 20px; }
+
+#meetverity { --accent: var(--mv); --soft: var(--mv-soft); }
+#airboard { --accent: var(--ab); --soft: var(--ab-soft); }
+#cloudmic { --accent: var(--cm); --soft: var(--cm-soft); }
+
+/* MeetVerity の場面: 議事録の項目と、根拠の発言をつなぐ */
+.mv-scene { display: grid; gap: 34px; position: relative; }
+.mv-item .row { display: flex; align-items: center; gap: 10px; }
+.pill { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--mv-soft); color: var(--mv); }
+.pill.ok { background: transparent; color: var(--muted); border: 1px solid var(--line); font-weight: 500; }
+.mv-item p { margin: 10px 0 0; color: var(--ink); font-weight: 700; font-size: 17px; line-height: 1.55; }
+.mv-item b { background: linear-gradient(transparent 58%, color-mix(in srgb, var(--mv-mint) 45%, transparent) 58%); }
+.ev { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-family: var(--f-mono); font-size: 12px; color: var(--mv); border: 1px solid color-mix(in srgb, var(--mv) 35%, transparent); padding: 4px 10px 4px 6px; border-radius: 8px; }
+.ev i { width: 18px; height: 18px; border-radius: 50%; background: var(--mv); display: grid; place-items: center; }
+.ev i::after { content: ""; border-left: 6px solid var(--surface); border-top: 4px solid transparent; border-bottom: 4px solid transparent; margin-left: 2px; }
+.mv-quote { margin-left: clamp(0px, 6vw, 56px); }
+.mv-quote .who { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; }
+.mv-quote .who span { width: 24px; height: 24px; border-radius: 50%; background: var(--mv-soft); color: var(--mv); display: grid; place-items: center; font-weight: 700; font-size: 12px; }
+.mv-quote p { margin: 8px 0 0; color: var(--text); }
+.mv-quote p mark { background: color-mix(in srgb, var(--mv-mint) 40%, transparent); color: inherit; border-radius: 3px; padding: 0 2px; }
+.wave { display: flex; align-items: center; gap: 3px; height: 22px; margin-top: 10px; }
+.wave span { flex: 1; max-width: 4px; border-radius: 2px; background: color-mix(in srgb, var(--mv) 40%, transparent); }
+.wave span.on { background: var(--mv); }
+.mv-link { position: absolute; left: 34px; top: 0; width: 2px; height: 100%; pointer-events: none; }
+.mv-link::before { content: ""; position: absolute; left: 0; top: 120px; bottom: 120px; width: 2px; background: repeating-linear-gradient(var(--mv) 0 6px, transparent 6px 11px); opacity: .6; }
+
+/* AirBoard の場面: スマホ → PC */
+.ab-scene { display: grid; grid-template-columns: minmax(0, .62fr) minmax(0, 1fr); gap: clamp(16px, 4vw, 36px); align-items: center; }
+.phone { aspect-ratio: 9 / 18.5; max-width: 100%; border-radius: 30px; background: var(--ink); padding: 7px; box-shadow: var(--shadow); }
+.phone .scr { height: 100%; border-radius: 24px; background: var(--surface); padding: 30px 12px 12px; display: flex; flex-direction: column; gap: 10px; position: relative; }
+.phone .scr::before { content: ""; position: absolute; top: 9px; left: 50%; width: 34%; height: 10px; transform: translateX(-50%); border-radius: 8px; background: var(--ink); }
+.bubble { font-size: 12.5px; line-height: 1.55; padding: 9px 11px; border-radius: 12px; background: var(--ab-soft); color: var(--ink); }
+.bubble.sel { outline: 2px solid var(--ab); }
+.copied { align-self: center; font-size: 11px; font-weight: 700; color: var(--surface); background: var(--ink); padding: 4px 12px; border-radius: 999px; }
+.photo { height: 64px; border-radius: 10px; background: linear-gradient(135deg, color-mix(in srgb, var(--ab) 70%, var(--surface)) 0%, color-mix(in srgb, var(--ab) 30%, var(--surface)) 55%, color-mix(in srgb, var(--cm) 35%, var(--surface)) 100%); }
+.laptop .lid { border-radius: 14px 14px 4px 4px; background: var(--ink); padding: 8px; box-shadow: var(--shadow); }
+.laptop .win { background: var(--surface); border-radius: 8px; min-height: 180px; padding: 12px 14px; }
+.laptop .bar { display: flex; gap: 5px; margin-bottom: 12px; }
+.laptop .bar i { width: 8px; height: 8px; border-radius: 50%; background: var(--line); }
+.laptop .doc { display: grid; gap: 8px; }
+.laptop .ln { height: 7px; border-radius: 4px; background: var(--line); }
+.laptop .pasted { font-size: 13px; color: var(--ink); background: var(--ab-soft); border-left: 3px solid var(--ab); padding: 6px 10px; border-radius: 4px; }
+.laptop .base { height: 10px; margin: 0 -4%; border-radius: 0 0 14px 14px; background: color-mix(in srgb, var(--ink) 80%, var(--paper)); }
+.beam { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; color: var(--ab); justify-content: center; margin-top: -6px; }
+.beam .track { flex: 1; max-width: 220px; height: 2px; position: relative; background: repeating-linear-gradient(90deg, var(--ab) 0 6px, transparent 6px 12px); opacity: .7; }
+.beam .track::after { content: ""; position: absolute; top: -4px; left: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--ab); animation: travel 2.6s ease-in-out infinite; }
+@keyframes travel { 0% { left: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { left: calc(100% - 10px); opacity: 0; } }
+
+/* CloudMic Live の場面: 会場の席と、話している 1 台 */
+.cm-scene { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); gap: clamp(16px, 4vw, 32px); align-items: center; }
+.hall { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(8px, 1.6vw, 14px); padding: 18px; }
+.seat { aspect-ratio: 1; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); position: relative; }
+.seat.live { background: var(--cm); border-color: var(--cm); }
+.seat.live::before, .seat.live::after { content: ""; position: absolute; inset: -6px; border-radius: 14px; border: 2px solid var(--cm); opacity: 0; animation: ring 2.2s ease-out infinite; }
+.seat.live::after { animation-delay: 1.1s; }
+@keyframes ring { 0% { transform: scale(.8); opacity: .8; } 100% { transform: scale(1.9); opacity: 0; } }
+.stagebar { grid-column: 1 / -1; text-align: center; font-size: 12px; color: var(--muted); border-top: 2px solid var(--line); padding-top: 6px; margin-top: 4px; }
+.host { display: grid; gap: 12px; }
+.host .now { font-size: 12px; color: var(--muted); }
+.host .now b { display: block; color: var(--ink); font-size: 16px; margin-top: 2px; }
+.meter { display: flex; align-items: flex-end; gap: 3px; height: 26px; }
+.meter span { width: 5px; border-radius: 3px; background: var(--cm); animation: lvl 1.1s ease-in-out infinite alternate; }
+@keyframes lvl { from { transform: scaleY(.35); } to { transform: scaleY(1); } }
+.meter span { transform-origin: bottom; }
+.qr { display: grid; grid-template-columns: repeat(9, 1fr); gap: 2px; width: 92px; padding: 8px; background: var(--surface); border-radius: 10px; border: 1px solid var(--line); }
+.qr i { aspect-ratio: 1; border-radius: 1px; }
+.qr i.k { background: var(--ink); }
+.qr-row { display: flex; align-items: center; gap: 12px; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+
+/* ---------- 足元 ---------- */
+footer { border-top: 1px solid var(--line); padding-block: 48px 56px; }
+.foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+.foot .mark { font-family: var(--f-display); font-weight: 800; font-size: 28px; color: var(--ink); letter-spacing: -.02em; }
+.foot h3 { margin: 0 0 10px; color: var(--muted); }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.foot a { text-decoration: none; color: var(--ink); }
+.foot a:hover { color: var(--mv); }
+.addr { font-family: var(--f-mono); font-size: 13px; color: var(--text); user-select: all; }
+.legal { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--muted); font-size: 12px; line-height: 1.7; padding-top: 24px; border-top: 1px solid var(--line); }
+
+@media (max-width: 860px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  .app:nth-child(even) .copy { order: 0; }
+  .foot { grid-template-columns: 1fr 1fr; }
+  .foot > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .topbar nav a.hide-sm { display: none; }
+  .cm-scene { grid-template-columns: minmax(0, 1fr); }
+  .hall { grid-template-columns: repeat(6, 1fr); padding: 6px; }
+  .mv-link { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
 </style>
 </head>
 <body>
 
-<header class="site-header plain">
-  <div class="wrap">
-    <a class="hub-brand" href="/" aria-label="845.Lab ホーム">845.Lab</a>
-    <nav class="nav" aria-label="メイン">
-      <a class="lang" href="/en/" hreflang="en" lang="en">EN</a>
+<header class="band">
+  <canvas id="signal" aria-hidden="true"></canvas>
+  <div class="wrap topbar">
+    <a class="mark" href="/">845.Lab</a>
+    <nav aria-label="アプリ">
+      <a class="hide-sm" href="#meetverity">MeetVerity</a>
+      <a class="hide-sm" href="#airboard">AirBoard</a>
+      <a class="hide-sm" href="#cloudmic">CloudMic Live</a>
+      <a href="/en/" hreflang="en" lang="en">EN</a>
     </nav>
+  </div>
+  <div class="wrap hero">
+    <span class="mono">Apps by 845.Lab</span>
+    <h1 class="wordmark">845<span class="dot">.</span>Lab</h1>
+    <p class="lead">会議も、コピーも、質疑応答も。</p>
+    <p class="sub">仕事の場で毎日起きる小さな手間を、ひとつずつアプリにしています。</p>
+    <div class="jump">
+      <a href="#meetverity"><img src="/assets/img/meetverity/icon-192.png" alt="" width="28" height="28">MeetVerity</a>
+      <a href="#airboard"><img src="/assets/img/AirBoard_icon_C1_rounded.svg" alt="" width="28" height="28">AirBoard</a>
+      <a href="#cloudmic"><img src="/assets/img/cloudmic/icon-192.png" alt="" width="28" height="28">CloudMic Live</a>
+    </div>
   </div>
 </header>
 
-<main>
-  <section class="hub-hero">
-    <div class="wrap">
-      <span class="eyebrow">Apps by 845.Lab</span>
-      <h1>845.Lab｜個人でアプリを作っています。</h1>
-    </div>
-  </section>
+<main class="wrap apps">
 
-  <section class="hub-list">
-    <div class="wrap">
-      <div class="cm-apps">
-        <article class="cm-app">
-          <img class="icon" src="/assets/img/meetverity/icon-192.png" alt="" width="64" height="64">
-          <h3><a href="https://meetverity.app/" rel="noopener">MeetVerity</a></h3>
-          <p class="tagline">会議を録音して、根拠つきの AI 議事録に。金額・日付・決定を、元の発言と結びつけます。</p>
-          <ul class="cm-chips"><li>iPhone・iPad</li></ul>
-          <div class="more">
-            <a href="https://meetverity.app/" rel="noopener">公式サイト</a>
-            <a class="sub" href="https://apps.apple.com/jp/app/meetverity/id6824217588?pt=128890200&amp;ct=845lab_hub&amp;mt=8" rel="noopener">App Store</a>
+  <!-- MeetVerity -->
+  <section class="app" id="meetverity" aria-labelledby="mv-name">
+    <div class="copy">
+      <span class="kicker mono">AI 議事録</span>
+      <div class="head">
+        <img src="/assets/img/meetverity/icon-192.png" alt="" width="64" height="64">
+        <h2 id="mv-name"><a href="https://meetverity.app/" rel="noopener">MeetVerity</a></h2>
+      </div>
+      <p class="tag">会議を録音して、根拠つきの AI 議事録に。金額・日付・決定を、元の発言と結びつけます。</p>
+      <ul class="plat" aria-label="対応"><li>iPhone</li><li>iPad</li></ul>
+      <div class="actions">
+        <a class="btn primary" href="https://meetverity.app/" rel="noopener">公式サイト</a>
+        <a class="btn store" href="https://apps.apple.com/jp/app/meetverity/id6824217588?pt=128890200&amp;ct=845lab_hub&amp;mt=8" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.9-4.3zM13.9 5.4c.7-.8 1.2-2 1-3.2-1 0-2.2.7-3 1.5-.6.7-1.2 1.9-1.1 3.1 1.2.1 2.3-.6 3.1-1.4z"/></svg>App Store</a>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="mv-scene">
+        <span class="mv-link"></span>
+        <div class="card mv-item">
+          <div class="row"><span class="pill">決定</span><span class="pill ok">根拠あり</span></div>
+          <p>サイトの公開日を <b>12 月 3 日</b> に変える</p>
+          <span class="ev"><i></i>根拠 03:12 を聴く</span>
+        </div>
+        <div class="card mv-quote">
+          <div class="who"><span>A</span>03:12 の発言</div>
+          <p>デザインの確認が延びたので、公開は <mark>12 月 3 日</mark> にずらしましょう。</p>
+          <div class="wave">
+            <span style="height:30%"></span><span style="height:55%"></span><span style="height:40%"></span><span class="on" style="height:85%"></span><span class="on" style="height:100%"></span><span class="on" style="height:70%"></span><span class="on" style="height:90%"></span><span class="on" style="height:60%"></span><span style="height:45%"></span><span style="height:30%"></span><span style="height:50%"></span><span style="height:35%"></span><span style="height:25%"></span><span style="height:40%"></span><span style="height:30%"></span><span style="height:20%"></span>
           </div>
-        </article>
-        <article class="cm-app">
-          <img class="icon" src="/assets/img/AirBoard_icon_C1_rounded.svg" alt="" width="64" height="64">
-          <h3><a href="/airboard/">AirBoard</a></h3>
-          <p class="tagline">スマホのコピーや写真を、同じ Wi‑Fi の PC へそのまま。アカウント登録なしで使えます。</p>
-          <ul class="cm-chips"><li>iPhone</li><li>Android</li><li>Windows</li></ul>
-          <div class="more">
-            <a href="/airboard/">くわしく</a>
-            <a class="sub" href="https://apps.apple.com/jp/app/airboard/id6768266068?pt=128890200&amp;ct=845lab_hub&amp;mt=8" rel="noopener">App Store</a>
-            <a class="sub" href="https://play.google.com/store/apps/details?id=com.AirBoard&amp;referrer=utm_source%3D845lab_hub" rel="noopener">Google Play</a>
-            <a class="sub" href="https://apps.microsoft.com/detail/9NDXC1X5SZB0?cid=845lab_hub" rel="noopener">Microsoft Store</a>
-          </div>
-        </article>
-        <article class="cm-app">
-          <img class="icon" src="/assets/img/cloudmic/icon-192.png" alt="" width="64" height="64">
-          <h3><a href="/cloudmic/">CloudMic Live</a></h3>
-          <p class="tagline">参加者のスマホがそのままマイクに。質疑応答でマイクを回さなくていい（QR を読むだけ・アプリ不要）。</p>
-          <ul class="cm-chips"><li>ブラウザ版</li><li>Windows</li><li>Mac は準備中</li></ul>
-          <div class="more">
-            <a href="/cloudmic/">くわしく</a>
-            <a class="sub" href="https://cloudmiclive.com/?cid=845lab_hub_web" rel="noopener">ブラウザで試す</a>
-            <a class="sub" href="https://apps.microsoft.com/detail/9NC0G8R0DRW5?cid=845lab_hub" rel="noopener">Microsoft Store</a>
-          </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- AirBoard -->
+  <section class="app" id="airboard" aria-labelledby="ab-name">
+    <div class="copy">
+      <span class="kicker mono">スマホ → PC</span>
+      <div class="head">
+        <img src="/assets/img/AirBoard_icon_C1_rounded.svg" alt="" width="64" height="64">
+        <h2 id="ab-name"><a href="/airboard/">AirBoard</a></h2>
+      </div>
+      <p class="tag">スマホのコピーや写真を、同じ Wi‑Fi の PC へそのまま。アカウント登録なしで使えます。</p>
+      <ul class="plat" aria-label="対応"><li>iPhone</li><li>Android</li><li>Windows</li></ul>
+      <div class="actions">
+        <a class="btn primary" href="/airboard/">くわしく</a>
+        <a class="btn store" href="https://apps.apple.com/jp/app/airboard/id6768266068?pt=128890200&amp;ct=845lab_hub&amp;mt=8" rel="noopener">App Store</a>
+        <a class="btn store" href="https://play.google.com/store/apps/details?id=com.AirBoard&amp;referrer=utm_source%3D845lab_hub" rel="noopener">Google Play</a>
+        <a class="btn store" href="https://apps.microsoft.com/detail/9NDXC1X5SZB0?cid=845lab_hub" rel="noopener">Microsoft Store</a>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="ab-scene">
+        <div class="phone"><div class="scr">
+          <div class="bubble">打ち合わせは 3 階の会議室です</div>
+          <div class="bubble sel">明日 10 時から、資料は共有フォルダに置きました</div>
+          <span class="copied">コピーしました</span>
+          <div class="photo"></div>
+        </div></div>
+        <div class="laptop">
+          <div class="lid"><div class="win">
+            <div class="bar"><i></i><i></i><i></i></div>
+            <div class="doc">
+              <div class="ln" style="width:72%"></div>
+              <div class="ln" style="width:88%"></div>
+              <div class="pasted">明日 10 時から、資料は共有フォルダに置きました</div>
+              <div class="ln" style="width:64%"></div>
+              <div class="ln" style="width:80%"></div>
+            </div>
+          </div></div>
+          <div class="base"></div>
+        </div>
+        <div class="beam"><span class="mono">Wi‑Fi</span><span class="track"></span><span class="mono">PC</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CloudMic Live -->
+  <section class="app" id="cloudmic" aria-labelledby="cm-name">
+    <div class="copy">
+      <span class="kicker mono">質疑応答</span>
+      <div class="head">
+        <img src="/assets/img/cloudmic/icon-192.png" alt="" width="64" height="64">
+        <h2 id="cm-name"><a href="/cloudmic/">CloudMic Live</a></h2>
+      </div>
+      <p class="tag">参加者のスマホがそのままマイクに。質疑応答でマイクを回さなくていい（QR を読むだけ・アプリ不要）。</p>
+      <ul class="plat" aria-label="対応"><li>ブラウザ版</li><li>Windows</li><li class="soon">Mac は準備中</li></ul>
+      <div class="actions">
+        <a class="btn primary" href="/cloudmic/">くわしく</a>
+        <a class="btn store" href="https://cloudmiclive.com/?cid=845lab_hub_web" rel="noopener">ブラウザで試す</a>
+        <a class="btn store" href="https://apps.microsoft.com/detail/9NC0G8R0DRW5?cid=845lab_hub" rel="noopener">Microsoft Store</a>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="cm-scene">
+        <div class="card hall" id="hall">
+          <div class="stagebar">ステージ</div>
+        </div>
+        <div class="card host">
+          <div class="now">いま話している人<b>3 列目の席</b></div>
+          <div class="meter"><span style="height:40%;animation-delay:-.2s"></span><span style="height:70%;animation-delay:-.5s"></span><span style="height:100%;animation-delay:-.1s"></span><span style="height:60%;animation-delay:-.7s"></span><span style="height:85%;animation-delay:-.3s"></span><span style="height:50%;animation-delay:-.6s"></span><span style="height:75%;animation-delay:-.4s"></span></div>
+          <div class="qr-row"><div class="qr" id="qr"></div>QR を読むと、<br>手元のスマホがマイクに</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
+<footer>
+  <div class="wrap foot">
     <div>
-      <p><b style="color:#fff;font-size:18px">845.Lab</b><br>個人でアプリを作っています。</p>
+      <div class="mark">845.Lab</div>
     </div>
     <div>
-      <h4>Apps</h4>
+      <h3 class="mono">Apps</h3>
       <ul>
         <li><a href="https://meetverity.app/" rel="noopener">MeetVerity</a></li>
         <li><a href="/airboard/">AirBoard</a></li>
@@ -104,9 +373,10 @@
       </ul>
     </div>
     <div>
-      <h4>Support</h4>
+      <h3 class="mono">Contact</h3>
       <ul>
         <li><a href="mailto:845labsupport@gmail.com">お問い合わせ</a></li>
+        <li class="addr">845labsupport@gmail.com</li>
         <li><a href="/en/" hreflang="en" lang="en">English</a></li>
       </ul>
     </div>
@@ -116,5 +386,68 @@
     </div>
   </div>
 </footer>
+
+<script>
+(() => {
+  // 会場の席（6 列 × 4 行）。3 列目の 1 席が話している
+  const hall = document.getElementById('hall');
+  const bar = hall.querySelector('.stagebar');
+  for (let i = 0; i < 24; i++) {
+    const s = document.createElement('span');
+    s.className = 'seat' + (i === 14 ? ' live' : '');
+    hall.insertBefore(s, bar);
+  }
+  // QR の絵（飾り。読んでもどこにも行かない）
+  const pat = [
+    '111111101','100000101','101110100','101110111','101110001','100000101','111111101','000000000','110101011'
+  ];
+  const qr = document.getElementById('qr');
+  pat.join('').split('').forEach(c => { const i = document.createElement('i'); if (c === '1') i.className = 'k'; qr.appendChild(i); });
+
+  // 頭の帯: 3 本の信号（藍・空・緑）がゆっくり流れる
+  const cv = document.getElementById('signal');
+  const ctx = cv.getContext('2d');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const css = getComputedStyle(document.documentElement);
+  const lines = [
+    { c: '#6D82FF', a: 0.55, f: 1.6, s: 0.00035, y: 0.62, amp: 0.10 },
+    { c: '#7DD3FC', a: 0.45, f: 2.3, s: 0.00026, y: 0.70, amp: 0.07 },
+    { c: '#34D399', a: 0.45, f: 1.1, s: 0.00042, y: 0.78, amp: 0.09 },
+  ];
+  let w = 0, h = 0, dpr = 1;
+  function size() {
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    w = cv.clientWidth; h = cv.clientHeight;
+    cv.width = w * dpr; cv.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(t) {
+    ctx.clearRect(0, 0, w, h);
+    // 目盛り（計器の格子）
+    ctx.strokeStyle = 'rgba(154,168,199,0.07)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < w; x += 48) { ctx.beginPath(); ctx.moveTo(x + .5, 0); ctx.lineTo(x + .5, h); ctx.stroke(); }
+    for (let y = 0; y < h; y += 48) { ctx.beginPath(); ctx.moveTo(0, y + .5); ctx.lineTo(w, y + .5); ctx.stroke(); }
+    lines.forEach((L, k) => {
+      ctx.beginPath();
+      for (let x = 0; x <= w; x += 4) {
+        const u = x / w;
+        const env = Math.sin(Math.PI * u) ** 1.5;
+        const y = h * L.y + Math.sin(u * Math.PI * 2 * L.f + t * L.s * 6 + k) * h * L.amp * env
+          + Math.sin(u * 37 + t * L.s * 14) * 3 * env;
+        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = L.c; ctx.globalAlpha = L.a; ctx.lineWidth = 1.6;
+      ctx.shadowColor = L.c; ctx.shadowBlur = 12;
+      ctx.stroke();
+      ctx.globalAlpha = 1; ctx.shadowBlur = 0;
+    });
+    if (!reduce) requestAnimationFrame(draw);
+  }
+  size();
+  addEventListener('resize', () => { size(); if (reduce) draw(0); });
+  reduce ? draw(4000) : requestAnimationFrame(draw);
+})();
+</script>
 </body>
 </html>

@@ -219,10 +219,40 @@ footer { border-top: 1px solid var(--line); padding-block: 48px 56px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* 英語のブラウザの人への案内の帯 */
+[hidden] { display: none !important; }
+.en-hint { background: var(--mv-mint); color: #06281C; font-size: 14px; padding-top: env(safe-area-inset-top, 0px); }
+.en-hint-in { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; min-height: 44px; padding-block: 6px; }
+.en-hint a { font-weight: 700; color: inherit; }
+.en-hint button { margin-left: auto; background: none; border: 0; font-size: 22px; line-height: 1; color: inherit; cursor: pointer; padding: 6px 10px; min-width: 44px; min-height: 44px; }
+.en-hint:not([hidden]) + .band { padding-top: 0; }
 </style>
 </head>
 <body>
 
+<div class="en-hint" id="en-hint" lang="en" hidden>
+  <div class="wrap en-hint-in">
+    <span>This page is in Japanese.</span>
+    <a href="/en/" hreflang="en">English version &rarr;</a>
+    <button type="button" id="en-hint-x" aria-label="Close">&times;</button>
+  </div>
+</div>
+<script>
+(() => {
+  try {
+    const langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']);
+    if (String(langs[0] || '').toLowerCase().startsWith('ja')) return;
+    try { if (localStorage.getItem('enHintClosed') === '1') return; } catch (e) {}
+    const el = document.getElementById('en-hint');
+    el.hidden = false;
+    document.getElementById('en-hint-x').addEventListener('click', () => {
+      el.hidden = true;
+      try { localStorage.setItem('enHintClosed', '1'); } catch (e) {}
+    });
+  } catch (e) {}
+})();
+</script>
 <header class="band">
   <canvas id="signal" aria-hidden="true"></canvas>
   <div class="wrap topbar">

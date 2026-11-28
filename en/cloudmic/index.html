@@ -81,6 +81,10 @@
         <h1>Every phone<br>is a <em>microphone.</em></h1>
         <p class="lead">CloudMic Live uses the smartphones already in the room as microphones and lets the host manage speech requests, permissions and mute from a PC. No passing a mic around, no extra hardware.</p>
         <div class="stores">
+          <a class="btn primary" href="https://cloudmiclive.com/?cid=site_web_en" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            <span><small>Free · nothing to install</small><b>Try in your browser</b></span>
+          </a>
           <a class="btn primary" href="https://apps.microsoft.com/detail/9NC0G8R0DRW5?cid=site-en" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8.5 20.5h7M12 17v3.5"/></svg>
             <span><small>Windows · host app</small><b>Get it from Microsoft Store</b></span>
@@ -91,6 +95,7 @@
           </a>
         </div>
         <p class="note" id="soon-note">Released 2026-11-16 · Free to start · Participants are always free · No account</p>
+        <p class="note">The browser version (<a href="https://cloudmiclive.com/?cid=site_web_en">cloudmiclive.com</a>) is free for 5 people for 30 minutes, and attendees can join over mobile data (<a href="/en/cloudmic/privacy/#browser">privacy policy</a>).</p>
         <div class="cm-join">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 14h1v1h-1zM17 20h4v1h-4z"/></svg>
           <p><b>Participants:</b> nothing to install. Scan the QR code on the host's screen with your phone and it opens in your browser.</p>
@@ -317,6 +322,7 @@
         <span class="eyebrow">Pricing</span>
         <h2>Participants are always free.<br>Hosts pay only for what they use.</h2>
         <p>The host app is free to download. For rooms with more than 5 people, pick a one-day pass or a subscription.</p>
+        <p>The browser version (<a href="https://cloudmiclive.com/?cid=site_web_en_pricing">cloudmiclive.com</a>) is free to try. To use paid features today, use the Windows app.</p>
       </div>
       <div class="cm-plans">
         <div class="cm-plan reveal">
@@ -382,16 +388,17 @@
               <th scope="col">Cloud-based<br>phone-mic services</th>
               <th scope="col">Text Q&amp;A<br>tools</th>
               <th scope="col" class="me">CloudMic Live</th>
+              <th scope="col">CloudMic Live<br>browser version</th>
             </tr>
           </thead>
           <tbody>
-            <tr><th scope="row">Participant setup</th><td>None</td><td>Install an app</td><td>Mostly browser (some need an iPhone app)</td><td>Browser</td><td class="me">Browser — just scan a QR code</td></tr>
-            <tr><th scope="row">Internet</th><td>Not needed</td><td>Required (receiver is wired)</td><td>Required (stops when it drops)</td><td>Required</td><td class="me"><span class="yes">Not needed</span> — venue Wi‑Fi only</td></tr>
-            <tr><th scope="row">Hardware</th><td>Mics, receiver, speakers</td><td>Dedicated receiver, pro-grade Wi‑Fi</td><td>A PC</td><td>A PC</td><td class="me">One Windows PC (plus the venue speakers)</td></tr>
-            <tr><th scope="row">Speak by voice</th><td>Yes</td><td>Yes (one at a time)</td><td>Yes</td><td>No — text only</td><td class="me"><span class="yes">Yes</span></td></tr>
-            <tr><th scope="row">Host controls</th><td>A person carries the mic</td><td>Approve, mute, polls</td><td>Approve, queue</td><td>Question moderation, polls (moderation often paid)</td><td class="me">Approve, mute, time limits, nomination, polls, question box, reports</td></tr>
-            <tr><th scope="row">Typical cost</th><td>Rental mic about US$10–22 per day each</td><td>Receiver alone about US$2,650–4,290 (e.g. Biamp Crowd Mics ATOM, street price), quoted per project</td><td>Monthly or 30-day plans</td><td>Often from about US$200 per event or US$900 per year</td><td class="me">Free up to 5 people,<br>then from US$4.99 a day</td></tr>
-            <tr><th scope="row">Not a fit for</th><td>Big crowds, lots of questions</td><td>Small rooms, tight budgets</td><td>Venues with weak internet, confidential talks</td><td>Rooms that want to talk out loud</td><td class="me">1,000-seat halls, HDMI output to venue displays, remote attendees</td></tr>
+            <tr><th scope="row">Participant setup</th><td>None</td><td>Install an app</td><td>Mostly browser (some need an iPhone app)</td><td>Browser</td><td class="me">Browser — just scan a QR code</td><td>Browser — just scan a QR code</td></tr>
+            <tr><th scope="row">Internet</th><td>Not needed</td><td>Required (receiver is wired)</td><td>Required (stops when it drops)</td><td>Required</td><td class="me"><span class="yes">Not needed</span> — venue Wi‑Fi only</td><td>Required. <span class="yes">Join from any network</span> (voice goes direct, or through Cloudflare's relay when needed)</td></tr>
+            <tr><th scope="row">Hardware</th><td>Mics, receiver, speakers</td><td>Dedicated receiver, pro-grade Wi‑Fi</td><td>A PC</td><td>A PC</td><td class="me">One Windows PC (plus the venue speakers)</td><td><span class="yes">Nothing to install</span> — a browser on a PC or phone (plus the venue speakers)</td></tr>
+            <tr><th scope="row">Speak by voice</th><td>Yes</td><td>Yes (one at a time)</td><td>Yes</td><td>No — text only</td><td class="me"><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td></tr>
+            <tr><th scope="row">Host controls</th><td>A person carries the mic</td><td>Approve, mute, polls</td><td>Approve, queue</td><td>Question moderation, polls (moderation often paid)</td><td class="me">Approve, mute, time limits, nomination, polls, question box, reports</td><td>Same as the app</td></tr>
+            <tr><th scope="row">Typical cost</th><td>Rental mic about US$10–22 per day each</td><td>Receiver alone about US$2,650–4,290 (e.g. Biamp Crowd Mics ATOM, street price), quoted per project</td><td>Monthly or 30-day plans</td><td>Often from about US$200 per event or US$900 per year</td><td class="me">Free up to 5 people,<br>then from US$4.99 a day</td><td>Free to try:<br>5 people, 30 minutes</td></tr>
+            <tr><th scope="row">Not a fit for</th><td>Big crowds, lots of questions</td><td>Small rooms, tight budgets</td><td>Venues with weak internet, confidential talks</td><td>Rooms that want to talk out loud</td><td class="me">1,000-seat halls, HDMI output to venue displays, remote attendees</td><td>Venues with weak internet, sessions over 30 minutes (trial only for now)</td></tr>
           </tbody>
         </table>
       </div>
@@ -418,7 +425,7 @@
       <div class="faq cm-faq reveal">
         <details>
           <summary>Does everyone need to be on the same Wi‑Fi?</summary>
-          <div class="a"><p>Yes. The host PC and the participants' phones must be on the same Wi‑Fi (or the same LAN). There is no way to join remotely over the internet — which also means no voice or event data ever passes through an outside server.</p><p>If the venue's Wi‑Fi blocks devices from talking to each other, you can connect phones to the PC's Mobile hotspot instead.</p></div>
+          <div class="a"><p>Yes. The host PC and the participants' phones must be on the same Wi‑Fi (or the same LAN). The app has no way to join remotely over the internet — which also means no voice or event data ever passes through an outside server.</p><p>If there is no shared Wi‑Fi, the browser version (<a href="https://cloudmiclive.com/?cid=site_web_en_faq">cloudmiclive.com</a>) lets attendees join over mobile data (free for 5 people, 30 minutes; messages pass through Cloudflare's relay).</p><p>If the venue's Wi‑Fi blocks devices from talking to each other, you can connect phones to the PC's Mobile hotspot instead.</p></div>
         </details>
         <details>
           <summary>A security warning appears on the phone the first time it connects</summary>
@@ -439,7 +446,7 @@
         </details>
         <details>
           <summary>Can I run a Teams or Zoom meeting and a live room at the same time?</summary>
-          <div class="a"><p>Yes. In the host app, "Output" lets you play the room's voices on the venue speakers and send them to the meeting app at the same time. The meeting app receives the audio through a free virtual audio cable (BlackHole on Mac, VB-CABLE on Windows): select that cable as the microphone in Teams or Zoom. The steps are shown from the "?" next to "Output" in the app.</p><p>Remote attendees cannot speak through their phones; only people on the same Wi‑Fi can join.</p></div>
+          <div class="a"><p>Yes. In the host app, "Output" lets you play the room's voices on the venue speakers and send them to the meeting app at the same time. The meeting app receives the audio through a free virtual audio cable (BlackHole on Mac, VB-CABLE on Windows): select that cable as the microphone in Teams or Zoom. The steps are shown from the "?" next to "Output" in the app.</p><p>With the app, remote attendees cannot speak through their phones; only people on the same Wi‑Fi can join. With the browser version (cloudmiclive.com), people elsewhere can join from their phone's browser.</p></div>
         </details>
         <details>
           <summary>Is audio recorded?</summary>

@@ -52,6 +52,29 @@
 <!-- CF_WEB_ANALYTICS: 訪問数計測（Cookie なし）。Cloudflare Web Analytics のトークン取得後、apply_to_site.py の --analytics-token でここに script が入る -->
 </head>
 <body>
+<!-- 英語のブラウザの人への案内の帯（自動では移さない。× で閉じると覚える） -->
+<div id="en-hint" lang="en" hidden style="position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:#d1fae5;color:#06281c;font:14px/1.4 system-ui,-apple-system,'Segoe UI',sans-serif;padding-bottom:env(safe-area-inset-bottom,0px);box-shadow:0 -4px 16px rgba(0,0,0,.18)">
+  <div style="display:flex;align-items:center;gap:10px;flex-wrap:nowrap;min-height:44px;padding:4px 8px 4px 16px;max-width:1120px;margin:0 auto;box-sizing:border-box">
+    <span style="min-width:0">This page is in Japanese.</span>
+    <a href="/en/cloudmic/guides/smartphone-as-wireless-mic/" hreflang="en" style="font-weight:700;color:inherit;white-space:nowrap">English version &rarr;</a>
+    <button type="button" id="en-hint-x" aria-label="Close" style="margin-left:auto;background:none;border:0;font-size:22px;line-height:1;color:inherit;cursor:pointer;min-width:44px;min-height:44px">&times;</button>
+  </div>
+</div>
+<script>
+(() => {
+  try {
+    const langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']);
+    if (String(langs[0] || '').toLowerCase().startsWith('ja')) return;
+    try { if (localStorage.getItem('enHintClosed') === '1') return; } catch (e) {}
+    const el = document.getElementById('en-hint');
+    el.hidden = false;
+    document.getElementById('en-hint-x').addEventListener('click', () => {
+      el.hidden = true;
+      try { localStorage.setItem('enHintClosed', '1'); } catch (e) {}
+    });
+  } catch (e) {}
+})();
+</script>
 
 <header class="site-header">
   <div class="wrap">
